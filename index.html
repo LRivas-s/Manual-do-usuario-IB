@@ -1,818 +1,769 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manual do Usuário | Sua Aplicação</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
-    />
 
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #f8f9fa;
-        color: #333;
-      }
-      .sidebar-tabs {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        position: sticky;
-        top: 20px;
-      }
-      .nav-pills .nav-link {
-        color: #555;
-        font-weight: 500;
-        padding: 12px 20px;
-        margin-bottom: 8px;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-      }
-      .nav-pills .nav-link.active {
-        background-color: #0d6efd;
-        color: white;
-        box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
-      }
-      .nav-pills .nav-link:hover:not(.active) {
-        background-color: #e9ecef;
-      }
-      .content-card {
-        background: white;
-        border-radius: 12px;
-        padding: 40px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        min-height: 70vh;
-      }
-      .media-placeholder {
-        background: #e9ecef;
-        border: 2px dashed #ced4da;
-        border-radius: 8px;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0;
-        color: #6c757d;
-      }
-      h2 {
-        font-weight: 700;
-        color: #1a1a1a;
-        margin-bottom: 20px;
-      }
-      .icon-box {
-        margin-right: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container py-5">
-      <header class="text-center mb-5">
-        <h1 class="display-5 fw-bold">Manual do Usuário</h1>
-        <p class="lead text-muted">
-          Tudo o que você precisa saber para dominar nossa plataforma.
-        </p>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manual do Usuário | Sua Aplicação</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
 
-      <div class="row g-4">
-        <div class="col-lg-4 col-xl-3">
-          <div
-            class="accordion shadow-sm rounded-4 overflow-hidden"
-            id="menuManual"
-            data-tabs-control
-          >
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseAcesso"
-                >
-                  <i class="bi bi-person-lock me-2"></i> Acesso
-                </button>
-              </h2>
-              <div
-                id="collapseAcesso"
-                class="accordion-collapse collapse show"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link active text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-cadastro"
-                      type="button"
-                      role="tab"
-                    >
-                      Guia de Cadastro
-                    </button>
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-perfil"
-                      type="button"
-                      role="tab"
-                    >
-                      Configuração de Perfil
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
 
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseNav"
-                >
-                  <i class="bi bi-map me-2"></i> Navegação e Mapa
-                </button>
-              </h2>
-              <div
-                id="collapseNav"
-                class="accordion-collapse collapse"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-navegacao"
-                      type="button"
-                      role="tab"
-                    >
-                      Navegação Interativa
-                    </button>
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-filtros"
-                      type="button"
-                      role="tab"
-                    >
-                      Uso de Filtros
-                    </button>
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-informacao"
-                      type="button"
-                      role="tab"
-                    >
-                      Tela de Informação
-                    </button>
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-resultado"
-                      type="button"
-                      role="tab"
-                    >
-                      Resultado de Informação
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+    .sidebar-tabs {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 20px;
+    }
 
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseComu"
-                >
-                  <i class="bi bi-people me-2"></i> Comunidade
-                </button>
-              </h2>
-              <div
-                id="collapseComu"
-                class="accordion-collapse collapse"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-atribuicao"
-                      type="button"
-                      role="tab"
-                    >
-                      Atribuição de Estrelas
-                    </button>
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-comentarios"
-                      type="button"
-                      role="tab"
-                    >
-                      Inserção de Comentários
-                    </button>
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-apresentacao"
-                      type="button"
-                      role="tab"
-                    >
-                      Tela de Apresentação
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+    .nav-pills .nav-link {
+      color: #555;
+      font-weight: 500;
+      padding: 12px 20px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
 
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapsePremium"
-                >
-                  <i class="bi bi-gem me-2"></i> Benefícios Premium
-                </button>
-              </h2>
-              <div
-                id="collapsePremium"
-                class="accordion-collapse collapse"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-dashboard"
-                      type="button"
-                      role="tab"
-                    >
-                      Dashboard
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+    .nav-pills .nav-link.active {
+      background-color: #0d6efd;
+      color: white;
+      box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+    }
 
-            <div class="accordion-item border-0 text-danger">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSuporte"
-                >
-                  <i class="bi bi-shield-lock me-2"></i> Suporte e Segurança
-                </button>
-              </h2>
-              <div
-                id="collapseSuporte"
-                class="accordion-collapse collapse"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-suporte"
-                      type="button"
-                      role="tab"
-                    >
-                      Central de Ajuda
-                    </button>
-                  </div>
+    .nav-pills .nav-link:hover:not(.active) {
+      background-color: #e9ecef;
+    }
+
+    .content-card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      min-height: 70vh;
+    }
+
+    .media-placeholder {
+      background: #e9ecef;
+      border: 2px dashed #ced4da;
+      border-radius: 8px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      color: #6c757d;
+    }
+
+    h2 {
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+    }
+
+    .icon-box {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container py-5">
+    <header class="text-center mb-5">
+      <h1 class="display-5 fw-bold">Manual do Usuário</h1>
+      <p class="lead text-muted">
+        Tudo o que você precisa saber para dominar nossa plataforma.
+      </p>
+    </header>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-xl-3">
+        <div class="accordion shadow-sm rounded-4 overflow-hidden" id="menuManual" data-tabs-control>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseAcesso">
+                <i class="bi bi-person-lock me-2"></i> Acesso
+              </button>
+            </h2>
+            <div id="collapseAcesso" class="accordion-collapse collapse show" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link active text-start mb-1" data-bs-toggle="pill"
+                    data-bs-target="#content-cadastro" type="button" role="tab">
+                    Guia de Cadastro
+                  </button>
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-perfil"
+                    type="button" role="tab">
+                    Configuração de Perfil
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-9">
-          <div
-            class="tab-content bg-white p-4 p-md-5 rounded-4 shadow-sm border h-100"
-            id="v-pills-tabContent"
-          >
-            <!-- Inicio da Aba "Acesso"-->
-            <div
-              class="tab-pane fade show active"
-              id="content-cadastro"
-              role="tabpanel"
-            >
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-person-lock text-primary"></i> Realizando
-                  Cadastro
-                </h2>
-                <p>Realizando Cadastro.</p>
-
-                <div class="media-placeholder">
-                  <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>Acesse a pagina incial do Infobairro.</li>
-                    <li>Click no icone de menu na canto inferior esquerdo.</li>
-                    <li>Selecione a opção "Cadastro".</li>
-                  </ul>
-                </div>
-                <hr />
-                <div class="media-placeholder">
-                  <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>
-                      Preencha com os seus dados pessoas os campos "Nome
-                      Completo", "Email", "Data de nascimento".
-                    </li>
-                    <li>
-                      Infome o seu CEP ou selecione a Cidade e o bairro onde
-                      reside.
-                    </li>
-                    <li>
-                      Crie uma senha conforme os requisitos (Mínimo de 6
-                      caracteres, Uma letra minúscula, Uma letra maiúscula, Um
-                      número, Um caractere especial (#, $, etc.)).
-                    </li>
-                    <li>Clique em "Finalizar Cadastro".</li>
-                  </ul>
-                </div>
-                <hr />
-                <div class="media-placeholder">
-                  <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>
-                      Será enviado um código de 6 dígitos para o seu endereço de
-                      e-mail, informe no campo disponivel.
-                    </li>
-                    <li>
-                      Caso não tenha recebido o codigo clique na opção "Reenviar
-                      Código". Lembre-se sempre de checkar a caixa de Spam.
-                    </li>
-                    <li>
-                      Com o campo preenchido corretamente clique em "Confirmar
-                      Codigo"
-                    </li>
-                  </ul>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNav">
+                <i class="bi bi-map me-2"></i> Navegação e Mapa
+              </button>
+            </h2>
+            <div id="collapseNav" class="accordion-collapse collapse" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-navegacao"
+                    type="button" role="tab">
+                    Navegação Interativa
+                  </button>
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-filtros"
+                    type="button" role="tab">
+                    Uso de Filtros
+                  </button>
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-informacao"
+                    type="button" role="tab">
+                    Tela de Informação
+                  </button>
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-resultado"
+                    type="button" role="tab">
+                    Resultado de Informação
+                  </button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!--  **************** Gerenciar Perfil *******************-->
-            <div class="tab-pane fade" id="content-perfil" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-person text-primary"></i> Gerenciando o
-                  seu Perfil
-                </h2>
-
-                <div class="media-placeholder">
-                  <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>Acesse a pagina incial do Infobairro.</li>
-                    <li>Clique no icone de menu na canto inferior esquerdo.</li>
-                    <li>Selecione a opção "Configurações".</li>
-                  </ul>
-                </div>
-                <hr />
-
-                <h3>
-                  <i class="bi bi-person text-primary"></i> Editando dados pessoais
-                </h3>
-                <div class="media-placeholder">
-                  <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>
-                      Em dados pessoas clique no botão "Editar" 
-                    </li>
-                    <li>
-                      Altere o campo desejado.
-                    </li>
-                    <li>
-                      Clique em "Salvar Alterações"
-                    </li>
-                  </ul>
-                </div>
-                <hr />
-                <h3>
-                  <i class="bi bi-person text-primary"></i> Alteração de Senha
-                </h3>
-                <div class="media-placeholder">
-                  <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>
-                      Em Segurança clique no botão "Alterar Senha".
-                    </li>
-                    <li>
-                      Informe sua senha atual.
-                    </li>
-                    <li>
-                      Crie sua nova senha conforme os requisitos (Mínimo de 6
-                      caracteres, Uma letra minúscula, Uma letra maiúscula, Um
-                      número, Um caractere especial (#, $, etc.)).
-                    </li>
-                  </ul>
-                </div>
-             <hr />
-                <h3>
-                  <i class="bi bi-person text-primary"></i> Exclusão de conta
-                </h3>
-                <div class="media-placeholder">
-                  <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>
-                      Em Zona de perigo clique no botão "Excluir Conta".
-                    </li>
-                    <li>
-                      Confirme a exclusão no botão "Sim, Excluir tudo"
-                    </li>
-                  </ul>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseComu">
+                <i class="bi bi-people me-2"></i> Comunidade
+              </button>
+            </h2>
+            <div id="collapseComu" class="accordion-collapse collapse" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-atribuicao"
+                    type="button" role="tab">
+                    Atribuição de Estrelas
+                  </button>
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-comentarios"
+                    type="button" role="tab">
+                    Inserção de Comentários
+                  </button>
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-apresentacao"
+                    type="button" role="tab">
+                    Tela de Apresentação
+                  </button>
                 </div>
               </div>
             </div>
-            <!-- Fim da Aba "Acesso"-->
+          </div>
 
-            <!-- Inicio da Aba "Navegação e Mapa"-->
-
-            <!--  **************** Navegação Interativa *******************-->
-
-            <div class="tab-pane fade" id="content-navegacao" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-compass text-primary"></i> Navegação no
-                  Sistema
-                </h2>
-                <p>
-                  Conheça os menus e como encontrar o que você precisa
-                  rapidamente.
-                </p>
-
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="media-placeholder" style="height: 200px">
-                      <span>[Imagem da Barra Lateral]</span>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media-placeholder" style="height: 200px">
-                      <span>[Imagem do Painel Central]</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mt-4">
-                  <p>
-                    O menu superior contém suas notificações e perfil. Já o menu
-                    lateral esquerdo permite alternar entre as ferramentas
-                    principais do sistema.
-                  </p>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsePremium">
+                <i class="bi bi-gem me-2"></i> Benefícios Premium
+              </button>
+            </h2>
+            <div id="collapsePremium" class="accordion-collapse collapse" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-dashboard"
+                    type="button" role="tab">
+                    Dashboard
+                  </button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!--  **************** Uso de Filtros *******************-->
-
-            <div class="tab-pane fade" id="content-filtros" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-compass text-primary"></i> Uso de Filtros
-                </h2>
-                <p>
-                  Conheça os menus e como encontrar o que você precisa
-                  rapidamente.
-                </p>
-
-                <div class="media-placeholder">
-                  <span>[Inserir Conteudo]</span>
-                </div>
-
-                <div class="mt-4">
-                  <p>Descrição.</p>
+          <div class="accordion-item border-0 text-danger">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSuporte">
+                <i class="bi bi-shield-lock me-2"></i> Suporte e Segurança
+              </button>
+            </h2>
+            <div id="collapseSuporte" class="accordion-collapse collapse" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-suporte"
+                    type="button" role="tab">
+                    Central de Ajuda
+                  </button>
                 </div>
               </div>
             </div>
-            <!--  **************** Tela de Informação *******************-->
-
-            <div class="tab-pane fade" id="content-informacao" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-compass text-primary"></i> Tela de Informação
-                </h2>
-                <p>
-                  Conheça os menus e como encontrar o que você precisa
-                  rapidamente.
-                </p>
-
-                <div class="media-placeholder">
-                  <span>[Inserir Conteudo]</span>
-                </div>
-
-                <div class="mt-4">
-                  <p>Descrição.</p>
-                </div>
-              </div>
-            </div>
-
-            <!--  **************** Resultado de infromação *******************-->
-            <div class="tab-pane fade" id="content-resultado" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-compass text-primary"></i> Resultado de
-                  Informação
-                </h2>
-                <p>
-                  Conheça os menus e como encontrar o que você precisa
-                  rapidamente.
-                </p>
-
-                <div class="media-placeholder">
-                  <span>[Inserir Conteudo]</span>
-                </div>
-
-                <div class="mt-4">
-                  <p>Descrição.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- FIm da Aba "Navegação e mapa"-->
-
-            <!-- Inicio da Aba "Comunidade e Interação"-->
-
-            <div class="tab-pane fade" id="content-atribuicao" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-people text-primary"></i> Avaliação dos
-                  bairros
-                </h2>
-                <p>
-                  Veja como colaborar com outros usuários e participar das
-                  notas.
-                </p>
-
-                <div class="media-placeholder">
-                  <span>[Inserir GIF de como postar um comentário]</span>
-                </div>
-              </div>
-            </div>
-
-            <!--  **************** Incerção de Comentarios *******************-->
-
-            <div class="tab-pane fade" id="content-comentarios" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-people text-primary"></i>
-                  Interação
-                </h2>
-                <p>
-                  Veja como colaborar com outros usuários e participar da aba
-                  comentarios.
-                </p>
-
-                <div class="media-placeholder">
-                  <span>[Inserir GIF de como postar um comentário]</span>
-                </div>
-              </div>
-            </div>
-
-            <!--  **************** Tela de Apresentação *******************-->
-            <div
-              class="tab-pane fade"
-              id="content-apresentacao"
-              role="tabpanel"
-            >
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-people text-primary"></i>
-                  Apresentação
-                </h2>
-                <p>Veja como acessar a tela de apresentação.</p>
-
-                <div class="media-placeholder">
-                  <span>[Inserir GIF de como postar um comentário]</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Fim da Aba "Comunidade e Interação"-->
-
-            <!-- Inicio da Aba "Beneficios Premium"-->
-            <div class="tab-pane fade" id="content-dashboard" role="tabpanel">
-              <div class="content-section text-center">
-                <div class="mb-4">
-                  <span class="badge bg-warning text-dark mb-2">Exclusivo</span>
-                  <h2>Benefícios Premium</h2>
-                </div>
-
-                <div class="sub-topic text-start">
-                  <h4>Dashboard Avançado</h4>
-                  <p>
-                    Acesse métricas exclusivas, KPIs em tempo real e relatórios
-                    exportáveis que só o plano Premium oferece.
-                  </p>
-                  <div class="media-placeholder">
-                    <span>[Inserir Conteudo]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- FIm da Aba "Beneficios Premium"-->
-
-            <!-- Inicio da Aba "Suporte e Segurança"-->
-            <div class="tab-pane fade" id="content-suporte" role="tabpanel">
-              <div class="content-card">
-                <div class="accordion accordion-flush" id="accordionLegal">
-                  <div class="accordion-item mb-3 border rounded">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed fw-bold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sup1"
-                      >
-                        Suporte ao Usuário
-                      </button>
-                    </h2>
-                    <div
-                      id="sup1"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionLegal"
-                    >
-                      <div class="accordion-body">
-                        Instruções de como abrir um ticket e horários de
-                        atendimento.
-                        <h2>
-                          <i class="bi bi-shield-check text-primary"></i>
-                          Suporte e Segurança
-                        </h2>
-                        <p>
-                          Sua segurança é nossa prioridade. Entenda as proteções
-                          e como pedir ajuda.
-                        </p>
-
-                        <div class="media-placeholder">
-                          <span>[Imagem dos Canais de Suporte]</span>
-                        </div>
-
-                        <div class="mt-4">
-                          <h5>Boas Práticas:</h5>
-                          <ol>
-                            <li>Nunca compartilhe sua senha com terceiros.</li>
-                            <li>
-                              Ative a Autenticação de Dois Fatores (2FA) nas
-                              configurações.
-                            </li>
-                            <li>
-                              Em caso de dúvidas, nosso chat funciona 24/7.
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item mb-3 border rounded">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed fw-bold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sup2"
-                      >
-                        Política de Privacidade
-                      </button>
-                    </h2>
-                    <div
-                      id="sup2"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionLegal"
-                    >
-                      <div class="accordion-body">
-                        Como tratamos seus dados sob a LGPD.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item mb-3 border rounded">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed fw-bold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sup3"
-                      >
-                        Termos de Uso
-                      </button>
-                    </h2>
-                    <div
-                      id="sup3"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionLegal"
-                    >
-                      <div class="accordion-body">
-                        Regras jurídicas de utilização do serviço.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item border rounded">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed fw-bold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sup4"
-                      >
-                        Política de Comunidade
-                      </button>
-                    </h2>
-                    <div
-                      id="sup4"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionLegal"
-                    >
-                      <div class="accordion-body">
-                        Diretrizes de comportamento e ética.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Fim da Aba "Suporte e Segurança"-->
           </div>
         </div>
       </div>
+
+      <div class="col-lg-9">
+        <div class="tab-content bg-white p-4 p-md-5 rounded-4 shadow-sm border h-100" id="v-pills-tabContent">
+          <!-- Inicio da Aba "Acesso"-->
+          <div class="tab-pane fade show active" id="content-cadastro" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-person-lock text-primary"></i> Realizando
+                Cadastro
+              </h2>
+              <p>Realizando Cadastro.</p>
+
+              <div class="media-placeholder">
+                <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>Acesse a pagina incial do Infobairro.</li>
+                  <li>Click no icone de menu na canto inferior esquerdo.</li>
+                  <li>Selecione a opção "Cadastro".</li>
+                </ul>
+              </div>
+              <hr />
+              <div class="media-placeholder">
+                <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>
+                    Preencha com os seus dados pessoas os campos "Nome
+                    Completo", "Email", "Data de nascimento".
+                  </li>
+                  <li>
+                    Infome o seu CEP ou selecione a Cidade e o bairro onde
+                    reside.
+                  </li>
+                  <li>
+                    Crie uma senha conforme os requisitos (Mínimo de 6
+                    caracteres, Uma letra minúscula, Uma letra maiúscula, Um
+                    número, Um caractere especial (#, $, etc.)).
+                  </li>
+                  <li>Clique em "Finalizar Cadastro".</li>
+                </ul>
+              </div>
+              <hr />
+              <div class="media-placeholder">
+                <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>
+                    Será enviado um código de 6 dígitos para o seu endereço de
+                    e-mail, informe no campo disponivel.
+                  </li>
+                  <li>
+                    Caso não tenha recebido o codigo clique na opção "Reenviar
+                    Código". Lembre-se sempre de checkar a caixa de Spam.
+                  </li>
+                  <li>
+                    Com o campo preenchido corretamente clique em "Confirmar
+                    Codigo"
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--  **************** Gerenciar Perfil *******************-->
+          <div class="tab-pane fade" id="content-perfil" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-person text-primary"></i> Gerenciando o
+                seu Perfil
+              </h2>
+
+              <div class="media-placeholder">
+                <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>Acesse a pagina incial do Infobairro.</li>
+                  <li>Clique no icone de menu na canto inferior esquerdo.</li>
+                  <li>Selecione a opção "Configurações".</li>
+                </ul>
+              </div>
+              <hr />
+
+              <h3>
+                <i class="bi bi-person text-primary"></i> Editando dados pessoais
+              </h3>
+              <div class="media-placeholder">
+                <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>
+                    Em dados pessoas clique no botão "Editar"
+                  </li>
+                  <li>
+                    Altere o campo desejado.
+                  </li>
+                  <li>
+                    Clique em "Salvar Alterações"
+                  </li>
+                </ul>
+              </div>
+              <hr />
+              <h3>
+                <i class="bi bi-person text-primary"></i> Alteração de Senha
+              </h3>
+              <div class="media-placeholder">
+                <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>
+                    Em Segurança clique no botão "Alterar Senha".
+                  </li>
+                  <li>
+                    Informe sua senha atual.
+                  </li>
+                  <li>
+                    Crie sua nova senha conforme os requisitos (Mínimo de 6
+                    caracteres, Uma letra minúscula, Uma letra maiúscula, Um
+                    número, Um caractere especial (#, $, etc.)).
+                  </li>
+                </ul>
+              </div>
+              <hr />
+              <h3>
+                <i class="bi bi-person text-primary"></i> Exclusão de conta
+              </h3>
+              <div class="media-placeholder">
+                <span>[Inserir GIF ou Vídeo do Tutorial de Login]</span>
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>
+                    Em Zona de perigo clique no botão "Excluir Conta".
+                  </li>
+                  <li>
+                    Confirme a exclusão no botão "Sim, Excluir tudo"
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Fim da Aba "Acesso"-->
+
+          <!-- Inicio da Aba "Navegação e Mapa"-->
+
+          <!--  **************** Navegação Interativa *******************-->
+
+          <div class="tab-pane fade" id="content-navegacao" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-compass text-primary"></i> Navegação no
+                Sistema
+              </h2>
+              <p>
+                Conheça os menus e como encontrar o que você precisa
+                rapidamente.
+              </p>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="media-placeholder" style="height: 200px">
+                    <span>[Imagem da Barra Lateral]</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="media-placeholder" style="height: 200px">
+                    <span>[Imagem do Painel Central]</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <p>
+                  O menu superior contém suas notificações e perfil. Já o menu
+                  lateral esquerdo permite alternar entre as ferramentas
+                  principais do sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--  **************** Uso de Filtros *******************-->
+
+          <div class="tab-pane fade" id="content-filtros" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-compass text-primary"></i> Uso de Filtros
+              </h2>
+              <p>
+                Conheça os menus e como encontrar o que você precisa
+                rapidamente.
+              </p>
+
+              <div class="media-placeholder">
+                <span>[Inserir Conteudo]</span>
+              </div>
+
+              <div class="mt-4">
+                <p>Descrição.</p>
+              </div>
+            </div>
+          </div>
+          <!--  **************** Tela de Informação *******************-->
+
+          <div class="tab-pane fade" id="content-informacao" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-compass text-primary"></i> Tela de Informação
+              </h2>
+              <p>
+                Conheça os menus e como encontrar o que você precisa
+                rapidamente.
+              </p>
+
+              <div class="media-placeholder">
+                <span>[Inserir Conteudo]</span>
+              </div>
+
+              <div class="mt-4">
+                <p>Descrição.</p>
+              </div>
+            </div>
+          </div>
+
+          <!--  **************** Resultado de infromação *******************-->
+          <div class="tab-pane fade" id="content-resultado" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-compass text-primary"></i> Resultado de
+                Informação
+              </h2>
+              <p>
+                Conheça os menus e como encontrar o que você precisa
+                rapidamente.
+              </p>
+
+              <div class="media-placeholder">
+                <span>[Inserir Conteudo]</span>
+              </div>
+
+              <div class="mt-4">
+                <p>Descrição.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FIm da Aba "Navegação e mapa"-->
+
+          <!-- Inicio da Aba "Comunidade e Interação"-->
+
+          <div class="tab-pane fade" id="content-atribuicao" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-people text-primary"></i> Avaliação dos
+                bairros
+              </h2>
+              <p>
+                Veja como colaborar com outros usuários e participar das
+                notas.
+              </p>
+
+              <div class="media-placeholder">
+                <span>[Inserir GIF de como postar um comentário]</span>
+              </div>
+            </div>
+          </div>
+
+          <!--  **************** Incerção de Comentarios *******************-->
+
+          <div class="tab-pane fade" id="content-comentarios" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-people text-primary"></i>
+                Interação
+              </h2>
+              <p>
+                Veja como colaborar com outros usuários e participar da aba
+                comentarios.
+              </p>
+
+              <div class="media-placeholder">
+                <span>[Inserir GIF de como postar um comentário]</span>
+              </div>
+            </div>
+          </div>
+
+          <!--  **************** Tela de Apresentação *******************-->
+          <div class="tab-pane fade" id="content-apresentacao" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-people text-primary"></i>
+                Apresentação
+              </h2>
+              <p>Veja como acessar a tela de apresentação.</p>
+
+              <div class="media-placeholder">
+                <span>[Inserir GIF de como postar um comentário]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fim da Aba "Comunidade e Interação"-->
+
+          <!-- Inicio da Aba "Beneficios Premium"-->
+          <div class="tab-pane fade" id="content-dashboard" role="tabpanel">
+            <div class="content-section text-center">
+              <div class="mb-4">
+                <span class="badge bg-warning text-dark mb-2">Exclusivo</span>
+                <h2>Benefícios Premium</h2>
+              </div>
+
+              <div class="sub-topic text-start">
+                <h4>Dashboard Avançado</h4>
+                <p>
+                  Acesse métricas exclusivas, KPIs em tempo real e relatórios
+                  exportáveis que só o plano Premium oferece.
+                </p>
+                <div class="media-placeholder">
+                  <span>[Inserir Conteudo]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIm da Aba "Beneficios Premium"-->
+
+          <!-- Inicio da Aba "Suporte e Segurança"-->
+          <div class="tab-pane fade" id="content-suporte" role="tabpanel">
+            <div class="content-card">
+              <div class="accordion accordion-flush" id="accordionLegal">
+                <div class="accordion-item mb-3 border rounded">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#sup1">
+                      Suporte ao Usuário
+                    </button>
+                  </h2>
+                  <div id="sup1" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+                    <div class="accordion-body">
+                      Instruções de como abrir um ticket e horários de
+                      atendimento.
+                      <h2>
+                        <i class="bi bi-shield-check text-primary"></i>
+                        Suporte e Segurança
+                      </h2>
+                      <p>
+                        Sua segurança é nossa prioridade. Entenda as proteções
+                        e como pedir ajuda.
+                      </p>
+
+                      <div class="media-placeholder">
+                        <span>[Imagem dos Canais de Suporte]</span>
+                      </div>
+
+                      <div class="mt-4">
+                        <h5>Boas Práticas:</h5>
+                        <ol>
+                          <li>Nunca compartilhe sua senha com terceiros.</li>
+                          <li>
+                            Ative a Autenticação de Dois Fatores (2FA) nas
+                            configurações.
+                          </li>
+                          <li>
+                            Em caso de dúvidas, nosso chat funciona 24/7.
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item mb-3 border rounded">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#sup2">
+                      Política de Privacidade
+                    </button>
+                  </h2>
+                  <div id="sup2" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+                    <div class="accordion-body">
+                      <br>
+                      <br>
+                      <h4 style="color: #838383;">Como tratamos seus dados sob a LGPD.</h4>
+                      <br>
+                      <br>
+
+                      <h5>1. Coleta de Dados</h5>
+
+                      <br>
+                      O InfoBairro poderá coletar os seguintes dados:
+                      <ul>
+                        <br>
+                        <li> Dados cadastrais fornecidos voluntariamente pelo usuário (quando aplicável);</li>
+                        <br>
+                        <li> Dados de uso e navegação dentro da plataforma;</li>
+                        <br>
+                        <li>Dados de localização: obtidos via navegador ou dispositivo para identificar se o usuário é
+                          morador ou visitante de um bairro;</li>
+                        <br>
+                        <li> Informações técnicas: endereço IP, tipo de navegador e modelo do dispositivo.
+                        </li>
+                      </ul>
+                      <br>
+                      <h5>2. Uso dos dados de localização</h5>
+                      <br>
+                      Os dados de localização são utilizados exclusivamente para:
+                      <br>
+                      <br>
+                      <ul>
+                        <li>Identificar a relação do usuário com o bairro avaliado (morador ou visitante);</li>
+                        <br>
+                        <li>Melhorar a contextualização das avaliações e comentários;</li>
+                        <br>
+                        <li>Aprimorar a experiência do usuário e a precisão das informações exibidas.</li>
+                      </ul>
+                      <br>
+                      <br>
+                      <p> <b>Importante:</b> O InfoBairro não utiliza dados de localização para rastreamento contínuo,
+                        nem para
+                        fins comerciais ou publicitários invasivos.
+                      </p>
+                      <br>
+                      <h5>3. Compartilhamento de Dados</h5>
+                      <br>
+                      O compartilhamento de dados ocorre de forma limitada:
+                      <br>
+                      <br>
+                      <ul>
+                        <li>Prestadores de serviços: Como o Google Maps, estritamente para funcionalidades de mapa e
+                          geolocalização;</li>
+                        <br>
+                        <li>Autoridades públicas: Apenas quando exigido por lei ou ordem judicial;</li>
+                        <br>
+                        <li>Não há comercialização ou venda de dados pessoais para terceiros.</li>
+                      </ul>
+                      <br>
+                      <h5>4. Armazenamento e Segurança</h5>
+                      <br>
+                      Os dados são armazenados em ambientes seguros, protegidos por medidas técnicas contra acessos não
+                      autorizados e vazamentos. Eles são mantidos apenas pelo tempo necessário para cumprir as
+                      finalidades descritas nesta política.
+
+
+                      <br>
+                      <br>
+                      <h5>5. Direitos do Usuário</h5>
+                      <br>
+                      Nos termos da lei, o usuário tem direito a:
+                      <br>
+                      <br>
+                      <ul>
+                        <li>Confirmar a existência de tratamento de seus dados;</li>
+                        <br>
+                        <li>Acessar, corrigir ou atualizar suas informações pessoais;</li>
+                        <br>
+                        <li>Solicitar a exclusão ou anonimização de dados (quando aplicável);</li>
+                        <br>
+                        <li>Revogar consentimentos previamente concedidos.</li>
+                      </ul>
+                      <br>
+                      <p><b>As solicitações podem ser feitas através dos canais oficiais de contato
+                        do InfoBairro.</b></p>
+                      <br>
+                      <h5>6. Serviços de Terceiros e Atualizações</h5>
+                      <br>
+                      A utilização de mapas está sujeita às políticas do Google. Recomendamos a leitura dos termos
+                      desses fornecedores.
+                      <br>
+                      
+                      Esta Política pode ser atualizada periodicamente. Ao continuar utilizando o InfoBairro, o usuário
+                      declara estar ciente da coleta e uso de seus dados conforme aqui descrito.
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item mb-3 border rounded">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#sup3">
+                      Termos de Uso
+                    </button>
+                  </h2>
+                  <div id="sup3" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+                    <div class="accordion-body">
+                      Regras jurídicas de utilização do serviço.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border rounded">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#sup4">
+                      Política de Comunidade
+                    </button>
+                  </h2>
+                  <div id="sup4" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+                    <div class="accordion-body">
+                      Diretrizes de comportamento e ética.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fim da Aba "Suporte e Segurança"-->
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document
-        .querySelectorAll("[data-tabs-control] .accordion-collapse")
-        .forEach((collapse) => {
-          collapse.addEventListener("show.bs.collapse", function () {
-            document.querySelectorAll(".nav-link").forEach((btn) => {
-              btn.classList.remove("active");
-            });
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document
+      .querySelectorAll("[data-tabs-control] .accordion-collapse")
+      .forEach((collapse) => {
+        collapse.addEventListener("show.bs.collapse", function () {
+          document.querySelectorAll(".nav-link").forEach((btn) => {
+            btn.classList.remove("active");
+          });
 
-            document.querySelectorAll(".tab-pane").forEach((tab) => {
-              tab.classList.remove("show", "active");
-            });
+          document.querySelectorAll(".tab-pane").forEach((tab) => {
+            tab.classList.remove("show", "active");
           });
         });
-
-      document.querySelectorAll(".accordion-collapse").forEach((collapse) => {
-        collapse.addEventListener("shown.bs.collapse", function () {
-          const firstBtn = this.querySelector(".nav-link");
-          if (firstBtn) {
-            new bootstrap.Tab(firstBtn).show();
-          }
-        });
       });
-    </script>
-  </body>
+
+    document.querySelectorAll(".accordion-collapse").forEach((collapse) => {
+      collapse.addEventListener("shown.bs.collapse", function () {
+        const firstBtn = this.querySelector(".nav-link");
+        if (firstBtn) {
+          new bootstrap.Tab(firstBtn).show();
+        }
+      });
+    });
+  </script>
+</body>
+
 </html>
