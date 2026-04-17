@@ -41,16 +41,34 @@
       }
 
       .media-placeholder {
-          background: #e9ecef;
-          border: 2px dashed #ced4da;
-          border-radius: 8px;
-          height: 300px;
+          width: 100%;
+          height: 250px;
+          /* Altura padrão para desktop */
+          overflow: hidden;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: 20px 0;
-          color: #6c757d;
+          background-color: #f8f9fa;
+          border-radius: 12px;
       }
+
+      /* Ajuste para celulares */
+      @media (max-width: 768px) {
+          .media-placeholder {
+              height: 180px;
+          }
+          .star-icon-custom {
+            font-size: 1.5em !important;
+          }
+      }
+
+           .media-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    object-position: center; 
+        border-radius: 8px; 
+}
 
       h2 {
           font-weight: 700;
