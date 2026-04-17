@@ -16,132 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
     />
-
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #f8f9fa;
-        color: #333;
-      }
-
-      .sidebar-tabs {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        position: sticky;
-        top: 20px;
-      }
-
-      .nav-pills .nav-link {
-        color: #555;
-        font-weight: 500;
-        padding: 12px 20px;
-        margin-bottom: 8px;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-      }
-
-      .nav-pills .nav-link.active {
-        background-color: #0d6efd;
-        color: white;
-        box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
-      }
-
-      .nav-pills .nav-link:hover:not(.active) {
-        background-color: #e9ecef;
-      }
-
-      .content-card {
-        background: white;
-        border-radius: 12px;
-        padding: 40px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        min-height: 70vh;
-      }
-
-      .media-placeholder {
-        background: #e9ecef;
-        border: 2px dashed #ced4da;
-        border-radius: 8px;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0;
-        color: #6c757d;
-      }
-
-      h2 {
-        font-weight: 700;
-        color: #1a1a1a;
-        margin-bottom: 20px;
-      }
-
-      .icon-box {
-        margin-right: 10px;
-      }
-      .btn-star-glow {
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        z-index: 1;
-      }
-
-      /* Brilho pulsante azul */
-      .btn-star-glow {
-        animation: blue-pulse 2s infinite;
-      }
-
-      @keyframes blue-pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
-        }
-        70% {
-          box-shadow: 0 0 0 10px rgba(13, 110, 253, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
-        }
-      }
-
-      /* Efeito de Estrelinhas (Partículas) */
-      .btn-star-glow::after {
-        content: "✦";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #0d6efd;
-        font-size: 10px;
-        opacity: 0;
-        pointer-events: none;
-        text-shadow:
-          15px -20px #70a1ff,
-          -25px 15px #1e90ff,
-          20px 25px #00d2ff,
-          -15px -15px #3742fa;
-        animation: star-float 3s infinite linear;
-      }
-
-      @keyframes star-float {
-        0% {
-          transform: rotate(0deg) scale(0.5);
-          opacity: 0;
-        }
-        50% {
-          opacity: 0.8;
-        }
-        100% {
-          transform: rotate(360deg) scale(1.2);
-          opacity: 0;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -542,31 +417,20 @@
                   <i class="bi bi-compass text-primary"></i> Navegação no
                   Sistema
                 </h2>
-                <p>
-                  Conheça os menus e como encontrar o que você precisa
-                  rapidamente.
+                <p class="text-muted">
+                  Explore o mapa interativo e acesse as principais
+                  funcionalidades da plataforma com facilidade.
                 </p>
 
-                <div class="row g-3">
+                <div class="row g-3 justify-content-center">
                   <div class="col-md-6">
                     <div class="media-placeholder" style="height: 200px">
                       <img
-                        src="/IMG/Menu.png"
-                        alt="Menu de ações"
-                        width="100%"
-                        height="100%"
-                        srcset=""
-                      />
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="media-placeholder" style="height: 200px">
-                      <img
-                        src="/IMG/BairroSheet.png"
+                        src="IMG/BairroSheet.png"
                         alt="Card de pré-visualização do bairro"
                         width="100%"
                         height="100%"
-                        srcset=""
+                        draggable="false"
                       />
                     </div>
                   </div>
@@ -574,118 +438,300 @@
 
                 <div class="mt-4">
                   <p>
-                    Ao clicar no ícone <i class="bi bi-person-lines-fill"></i>,
-                    você poderá acessar as configurações da sua conta,
-                    visualizar seus comentários e encerrar a sessão.
+                    <strong>Explorando o Mapa:</strong> Nossa interface foi
+                    desenhada para ser totalmente interativa. Navegue livremente
+                    pelas regiões e, ao selecionar o marcador (pin) de qualquer
+                    bairro no mapa, uma janela de pré-visualização surgirá na
+                    parte inferior da tela, exibindo um resumo rápido com as
+                    principais estatísticas locais.
                   </p>
+                  <div class="row g-3 justify-content-center">
+                    <div class="col-md-6">
+                      <div class="media-placeholder" style="height: 200px">
+                        <img
+                          src="IMG/Menu.png"
+                          alt="Menu de ações"
+                          height="100%"
+                          draggable="false"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
                   <p>
-                    Ao selecionar o marcador (pin) de qualquer bairro no mapa,
-                    será exibida uma pré-visualização com suas estatísticas.
+                    <strong>Seu Perfil:</strong> Ao clicar no ícone
+                    <i class="bi bi-person-lines-fill text-primary"></i> no
+                    menu, você acessa seu painel pessoal. Lá é possível
+                    gerenciar as configurações da sua conta, revisar todos os
+                    comentários que você já publicou na plataforma e encerrar a
+                    sua sessão de forma segura.
                   </p>
                 </div>
               </div>
             </div>
-
-            <!--  **************** Uso de Filtros *******************-->
 
             <div class="tab-pane fade" id="content-filtros" role="tabpanel">
               <div class="content-card">
                 <h2>
-                  <i class="bi bi-compass text-primary"></i> Uso de Filtros
+                  <i class="bi bi-funnel text-primary"></i> Uso de Filtros
                 </h2>
-                <p>
-                  Conheça os menus e como encontrar o que você precisa
-                  rapidamente.
+                <p class="text-muted">
+                  Refine sua busca e encontre exatamente a região que atende às
+                  suas necessidades.
                 </p>
 
                 <div class="media-placeholder">
                   <img
-                    src="/IMG/Filtro.png"
+                    src="IMG/Filtro.png"
                     alt="Filtros"
                     width="100%"
                     height="100%"
+                    draggable="false"
                     srcset=""
                   />
                 </div>
 
                 <div class="mt-4">
                   <p>
-                    Ao clicar no ícone de lupa, você acessa a aba de filtros
-                    para encontrar bairros com mais facilidade. É possível
-                    pesquisar pelo nome do bairro, além de aplicar filtros por
-                    cidade e por categorias como infraestrutura, segurança,
-                    lazer e transporte.
+                    Procurando por algo específico? Clique no ícone de lupa para
+                    abrir a nossa gaveta de filtros inteligentes. O sistema
+                    oferece múltiplas formas de refinar sua pesquisa:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Busca Direta:</strong> Digite o nome exato do
+                      bairro que deseja analisar.
+                    </li>
+                    <li>
+                      <strong>Filtro por Cidade:</strong> Delimite o mapa para
+                      mostrar apenas os bairros de um município específico.
+                    </li>
+                    <li>
+                      <strong>Categorias de Qualidade:</strong> Onde o sistema
+                      realmente brilha! Filtre bairros que possuem as melhores
+                      notas em categorias cruciais para você, como
+                      <strong>Infraestrutura</strong>,
+                      <strong>Segurança</strong>, <strong>Lazer</strong> e
+                      <strong>Transporte</strong>.
+                    </li>
+                  </ul>
+                  <p>
+                    <em
+                      >Dica: Combine diferentes filtros para encontrar o local
+                      ideal para sua moradia ou negócio!</em
+                    >
                   </p>
                 </div>
               </div>
             </div>
-            <!--  **************** Tela de Informação *******************-->
 
             <div class="tab-pane fade" id="content-informacao" role="tabpanel">
               <div class="content-card">
-                <h2><i class="bi bi-compass text-primary"></i> Cards</h2>
-                <p>
-                  Conheça os menus e como encontrar o que você precisa
-                  rapidamente.
+                <h2>
+                  <i class="bi bi-card-heading text-primary"></i> Cards de
+                  Informação
+                </h2>
+                <p class="text-muted">
+                  Mergulhe em dados aprofundados sobre cada região através de
+                  relatórios segmentados.
                 </p>
 
                 <div class="media-placeholder">
                   <img
-                    src="/IMG/Cards.png"
+                    src="IMG/Cards.png"
                     alt="Detalhes"
                     width="100%"
                     height="100%"
+                    draggable="false"
                     srcset=""
                   />
                 </div>
 
                 <div class="mt-4">
                   <p>
-                    Ao clicar em qualquer um dos cards, você poderá visualizar
-                    informações detalhadas sobre a estatística correspondente.
-                    Por exemplo, ao selecionar o card de “Entrega”, serão
-                    exibidos dados sobre como as entregas funcionam naquele
-                    bairro.
+                    Ao abrir os detalhes de um bairro, as informações não são
+                    jogadas todas de uma vez. Elas são organizadas em
+                    <strong>Cards Temáticos</strong> que funcionam como atalhos
+                    visuais.
+                  </p>
+                  <p>
+                    Clique em qualquer um dos cards para expandir e ler
+                    informações detalhadas sobre aquela estatística
+                    correspondente. Por exemplo: ao selecionar o card de
+                    <strong>“Entrega”</strong>, o sistema exibirá gráficos,
+                    dados de acessibilidade e avaliações sobre como funcionam os
+                    serviços de delivery, transportadoras e correios naquelas
+                    ruas específicas.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            <!--  **************** Resultado de infromação *******************-->
-            <div class="tab-pane fade" id="content-resultado" role="tabpanel">
-              <div class="content-card">
-                <h2><i class="bi bi-compass text-primary"></i> Avaliação</h2>
-                <p>
-                  Conheça os menus e como encontrar o que você precisa
-                  rapidamente.
-                </p>
 
                 <div class="media-placeholder">
                   <img
-                    src="/IMG/MeuBairroAvaliar.png"
-                    alt="Avaliação"
+                    src="IMG/CardInformativo.png"
+                    alt="Exemplo de Card Informativo"
                     width="100%"
                     height="100%"
+                    draggable="false"
                     srcset=""
                   />
                 </div>
 
                 <div class="mt-4">
+                  <h5>
+                    <i class="bi bi-patch-question text-primary me-2"></i
+                    >Entenda as Métricas
+                  </h5>
                   <p>
-                    Caso o bairro selecionado seja o mesmo informado no seu
-                    cadastro, você poderá clicar no botão
-                    <button
-                      class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto"
-                      type="button"
-                    >
-                      <i class="bi bi-star-fill me-2"></i>Avaliar!
-                    </button>
-                    para enviar sua avaliação de forma rápida e simples.
+                    Para garantir que você compreenda exatamente como cada nota
+                    é calculada, disponibilizamos guias explicativos em todos os
+                    indicadores. Ao clicar no ícone de ajuda
+                    <i class="bi bi-info-circle-fill" style="color: #555"></i>
+                    localizado no canto de cada card, um painel informativo será
+                    exibido com a definição detalhada daquela categoria.
                   </p>
+
+                  <div
+                    class="alert alert-light border-start border-primary border-4 py-2"
+                  >
+                    <small class="text-muted">
+                      <i class="bi bi-lightbulb me-1"></i>
+                      <strong>Exemplo Visual:</strong> Na imagem acima, vemos o
+                      informativo do card de <strong>Entrega</strong>, explica
+                      que a nota considera a facilidade de acesso de
+                      transportadoras, a cobertura de aplicativos de delivery ou
+                      a frequência de distribuição postal na região.
+                    </small>
+                  </div>
                 </div>
               </div>
             </div>
 
+            <div class="tab-pane fade" id="content-resultado" role="tabpanel">
+              <div class="content-card">
+                <h2>
+                  <i class="bi bi-star-half text-primary"></i> Avaliação
+                  Comunitária
+                </h2>
+                <p class="text-muted">
+                  Sua voz tem poder! Compartilhe sua experiência real e ajude a
+                  construir um mapa mais fiel à realidade de cada região.
+                </p>
+
+                <div class="media-placeholder mb-4">
+                  <img
+                    src="IMG/MeuBairroAvaliar.png"
+                    alt="Demonstração da tela de avaliação"
+                    width="100%"
+                    height="100%"
+                    draggable="false"
+                  />
+                </div>
+
+                <div class="mt-4">
+                  <h5>Como contribuir?</h5>
+                  <p>
+                    Acreditamos que ninguém conhece melhor um lugar do que quem
+                    vive nele. Por isso, nossa plataforma libera um canal de
+                    feedback exclusivo para moradores.
+                  </p>
+
+                  <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                      <ul class="list-unstyled">
+                        <li class="mb-3">
+                          <i
+                            class="bi bi-check-circle-fill text-success me-2"
+                          ></i>
+                          <strong>Reconhecimento Automático:</strong> O sistema
+                          identifica se o bairro visualizado é o mesmo que você
+                          cadastrou no seu perfil.
+                        </li>
+                        <li class="mb-3">
+                          <i
+                            class="bi bi-check-circle-fill text-success me-2"
+                          ></i>
+                          <strong>Acesso Rápido:</strong> Se você for um morador
+                          local, o botão
+                          <button
+                            class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto"
+                            type="button"
+                          >
+                            <i class="bi bi-star-fill me-2"></i>Avaliar!
+                          </button>
+                          aparecerá automaticamente.
+                        </li>
+                        <li>
+                          <i
+                            class="bi bi-check-circle-fill text-success me-2"
+                          ></i>
+                          <strong>Impacto Real:</strong> Suas notas de 1 a 5
+                          alimentam os gráficos de infraestrutura, segurança e
+                          lazer que todos os outros usuários consultam.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                      <div
+                        class="p-3 border rounded-3 bg-light shadow-sm text-center"
+                      >
+                        <h6
+                          class="text-uppercase fw-bold small text-muted mb-3"
+                        >
+                          Teste a Interação abaixo:
+                        </h6>
+
+                        <div class="star-rating-wrapper">
+                          <div
+                            class="d-flex justify-content-center align-items-center mb-2"
+                          >
+                            <i
+                              class="bi bi-star-fill star-icon-custom"
+                              data-value="1"
+                            ></i>
+                            <i
+                              class="bi bi-star-fill star-icon-custom"
+                              data-value="2"
+                            ></i>
+                            <i
+                              class="bi bi-star-fill star-icon-custom"
+                              data-value="3"
+                            ></i>
+                            <i
+                              class="bi bi-star-fill star-icon-custom"
+                              data-value="4"
+                            ></i>
+                            <i
+                              class="bi bi-star-fill star-icon-custom"
+                              data-value="5"
+                            ></i>
+                          </div>
+                          <input type="hidden" name="rating" value="0" />
+                          <div
+                            class="feedback-text fw-bold"
+                            style="min-height: 24px"
+                          >
+                            Toque para votar
+                          </div>
+                        </div>
+
+                        <small class="text-muted mt-2 d-block">
+                          Experimente passar o mouse ou tocar nas estrelas para
+                          ver o sistema em ação.
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-info mt-4 border-0 shadow-sm">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Lembre-se:</strong> Você pode editar sua avaliação a
+                    qualquer momento caso sua percepção sobre o bairro mude.
+                  </div>
+                </div>
+              </div>
+            </div>
+            ```
             <!-- FIm da Aba "Navegação e mapa"-->
 
             <!-- Inicio da Aba "Comunidade e Interação"-->
@@ -694,7 +740,7 @@
               <div class="content-card">
                 <h2>
                   <i class="bi bi-people text-primary"></i> Avaliação dos
-                  bairros 
+                  bairros
                 </h2>
                 <p>
                   Veja como colaborar com outros usuários e participar das
@@ -704,19 +750,24 @@
                 <div class="media-placeholder">
                   <span>[Inserir GIF de como postar um comentário]</span>
                 </div>
-                
+
                 <h5>Como avaliar um bairro:</h5>
                 <ul>
-               <li>Selecione o bairro em que você reside.</li>
-              <li>Clique no card da categoria desejada (ex: Segurança, Saúde, Lazer)</li>
-              <li>
-              Clique nas estrelas correspondentes para registrar sua nota de 1 a 5
-            </li>
-            </ul>
-               <div class="alert alert-info" role="alert">
-                <i class="bi bi-info-circle"></i> 
-            <strong>Lembre-se:</strong>Apenas moradores cadastrados podem avaliar o bairro através da inserção de estrelas!
-              </div>
+                  <li>Selecione o bairro em que você reside.</li>
+                  <li>
+                    Clique no card da categoria desejada (ex: Segurança, Saúde,
+                    Lazer)
+                  </li>
+                  <li>
+                    Clique nas estrelas correspondentes para registrar sua nota
+                    de 1 a 5
+                  </li>
+                </ul>
+                <div class="alert alert-info" role="alert">
+                  <i class="bi bi-info-circle"></i>
+                  <strong>Lembre-se:</strong>Apenas moradores cadastrados podem
+                  avaliar o bairro através da inserção de estrelas!
+                </div>
               </div>
             </div>
 
@@ -739,25 +790,35 @@
 
                 <h5>Como compartilhar sua experiência:</h5>
                 <ul>
-                  <li>Escreva seu comentário sobre o bairro, sendo morador ou visitante (informação será mostrada para quem vizualizar seu comentário)</li>
+                  <li>
+                    Escreva seu comentário sobre o bairro, sendo morador ou
+                    visitante (informação será mostrada para quem vizualizar seu
+                    comentário)
+                  </li>
                   <li>Seja honesto e compartilhe apenas fatos verdadeiros</li>
-                  <li>Mantenha o respeito e a empatia: evite palavras de baixo calão e ofensas
-                </li>
-                  <li>Clique no botão 
+                  <li>
+                    Mantenha o respeito e a empatia: evite palavras de baixo
+                    calão e ofensas
+                  </li>
+                  <li>
+                    Clique no botão
                     <button
                       class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto"
                       type="button"
                     >
                       <i class="bi bi-star-fill me-2"></i>Enviar
-                    </button> para publicar sua contribuição à comunidade</li>
-               </ul>
+                    </button>
+                    para publicar sua contribuição à comunidade
+                  </li>
+                </ul>
                 <div class="alert alert-info" role="alert">
-              <i class="bi bi-info-circle"></i> 
-             <strong>Lembre-se:</strong> Comentários que violarem nossas diretrizes de respeito e convivência podem ser removidos.
-                Contamos com a sua colaboração para uma plataforma melhor!
-              </div>
-              </div>
+                  <i class="bi bi-info-circle"></i>
+                  <strong>Lembre-se:</strong> Comentários que violarem nossas
+                  diretrizes de respeito e convivência podem ser removidos.
+                  Contamos com a sua colaboração para uma plataforma melhor!
                 </div>
+              </div>
+            </div>
 
             <!--  **************** Tela de Apresentação *******************-->
             <div
@@ -775,19 +836,35 @@
                 <div class="media-placeholder">
                   <span>[Inserir GIF de como postar um comentário]</span>
                 </div>
-                <h5>Como acessar a tela de apresentação das avaliações gerais:</h5>
+                <h5>
+                  Como acessar a tela de apresentação das avaliações gerais:
+                </h5>
                 <ul>
-                  <li>Na página principal do InfoBairro, selecione o bairro escolhido clicando em cima do PIN colorido onde contém a numeração de nota geral</li>
-                  <li>Ao clicar, irá aparecer um card na parte inferior da tela apresentando um resumo das avaliações</li>
-                  <li>Clique no botão 
-                      <button
+                  <li>
+                    Na página principal do InfoBairro, selecione o bairro
+                    escolhido clicando em cima do PIN colorido onde contém a
+                    numeração de nota geral
+                  </li>
+                  <li>
+                    Ao clicar, irá aparecer um card na parte inferior da tela
+                    apresentando um resumo das avaliações
+                  </li>
+                  <li>
+                    Clique no botão
+                    <button
                       class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto"
                       type="button"
                     >
                       <i class="bi bi-star-fill me-2"></i>Detalhes Completos
-                    </button></li>
-                  <li>O usuário será levado a página de Tela de Apresentação, onde mostra os cards das avaliações específicas (Segurança, Saúde, Educação...), A aba de comentários sobre a localidade
-                  ; contendo todas as informações sucintas e atualizadas sobre o bairro.</li>
+                    </button>
+                  </li>
+                  <li>
+                    O usuário será levado a página de Tela de Apresentação, onde
+                    mostra os cards das avaliações específicas (Segurança,
+                    Saúde, Educação...), A aba de comentários sobre a localidade
+                    ; contendo todas as informações sucintas e atualizadas sobre
+                    o bairro.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -859,9 +936,10 @@
                         <div class="media-placeholder">
                           <span
                             ><img
-                              src="./IMG/Acesso-contato.png"
+                              src="IMG/Acesso-contato.png"
                               alt=""
                               style="max-width: 100%; height: auto"
+                              draggable="false"
                           /></span>
                         </div>
                         <br />
@@ -872,9 +950,10 @@
                         <div class="media-placeholder">
                           <span
                             ><img
-                              src="./IMG/Contato-Infobairro.png"
+                              src="IMG/Contato-Infobairro.png"
                               alt=""
                               style="max-width: 100%; height: auto"
+                              draggable="false"
                           /></span>
                         </div>
                         <br />
@@ -1423,30 +1502,7 @@
       </div>
     </div>
 
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document
-        .querySelectorAll("[data-tabs-control] .accordion-collapse")
-        .forEach((collapse) => {
-          collapse.addEventListener("show.bs.collapse", function () {
-            document.querySelectorAll(".nav-link").forEach((btn) => {
-              btn.classList.remove("active");
-            });
-
-            document.querySelectorAll(".tab-pane").forEach((tab) => {
-              tab.classList.remove("show", "active");
-            });
-          });
-        });
-
-      document.querySelectorAll(".accordion-collapse").forEach((collapse) => {
-        collapse.addEventListener("shown.bs.collapse", function () {
-          const firstBtn = this.querySelector(".nav-link");
-          if (firstBtn) {
-            new bootstrap.Tab(firstBtn).show();
-          }
-        });
-      });
-    </script>
   </body>
 </html>
