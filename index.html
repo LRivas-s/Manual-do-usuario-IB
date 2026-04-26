@@ -1,1570 +1,1286 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manual do Usuário | InfoBairro</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <div class="container py-5">
-      <header class="text-center mb-5">
-        <h1 class="display-5 fw-bold">Manual do Usuário</h1>
-        <p class="lead text-muted">
-          Tudo o que você precisa saber para dominar nossa plataforma.
-        </p>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manual do Usuário | InfoBairro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-      <div class="row g-4">
-        <div class="col-lg-4 col-xl-3">
-          <div
-            class="accordion shadow-sm rounded-4 overflow-hidden"
-            id="menuManual"
-            data-tabs-control
-          >
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseAcesso"
-                >
-                  <i class="bi bi-person-lock me-2"></i> Acesso
-                </button>
-              </h2>
-              <div
-                id="collapseAcesso"
-                class="accordion-collapse collapse show"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link active text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-cadastro"
-                      type="button"
-                      role="tab"
-                    >
-                      Guia de Cadastro
-                    </button>
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-perfil"
-                      type="button"
-                      role="tab"
-                    >
-                      Configuração de Perfil
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+<body>
+  <div class="container py-5">
+    <header class="text-center mb-5">
+      <h1 class="display-5 fw-bold">Manual do Usuário</h1>
+      <p class="lead text-muted">
+        Tudo o que você precisa saber para dominar nossa plataforma.
+      </p>
+    </header>
 
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseNav"
-                >
-                  <i class="bi bi-map me-2"></i> Navegação e Mapa
-                </button>
-              </h2>
-              <div
-                id="collapseNav"
-                class="accordion-collapse collapse"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-navegacao"
-                      type="button"
-                      role="tab"
-                    >
-                      Navegação Interativa
-                    </button>
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-filtros"
-                      type="button"
-                      role="tab"
-                    >
-                      Uso de Filtros
-                    </button>
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-informacao"
-                      type="button"
-                      role="tab"
-                    >
-                      Estatísticas
-                    </button>
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-resultado"
-                      type="button"
-                      role="tab"
-                    >
-                      Avaliação
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseComu"
-                >
-                  <i class="bi bi-people me-2"></i> Comunidade
-                </button>
-              </h2>
-              <div
-                id="collapseComu"
-                class="accordion-collapse collapse"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-atribuicao"
-                      type="button"
-                      role="tab"
-                    >
-                      Atribuição de Estrelas
-                    </button>
-                    <button
-                      class="nav-link text-start mb-1"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-comentarios"
-                      type="button"
-                      role="tab"
-                    >
-                      Inserção de Comentários
-                    </button>
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-apresentacao"
-                      type="button"
-                      role="tab"
-                    >
-                      Tela de Apresentação
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item border-0">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapsePremium"
-                >
-                  <i class="bi bi-gem me-2"></i> Benefícios Premium
-                </button>
-              </h2>
-              <div
-                id="collapsePremium"
-                class="accordion-collapse collapse"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-dashboard"
-                      type="button"
-                      role="tab"
-                    >
-                      Dashboard
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item border-0 text-danger">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed fw-bold"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSuporte"
-                >
-                  <i class="bi bi-shield-lock me-2"></i> Suporte e Segurança
-                </button>
-              </h2>
-              <div
-                id="collapseSuporte"
-                class="accordion-collapse collapse"
-                data-bs-parent="#menuManual"
-              >
-                <div class="accordion-body p-2 bg-light">
-                  <div class="nav flex-column nav-pills" role="tablist">
-                    <button
-                      class="nav-link text-start"
-                      data-bs-toggle="pill"
-                      data-bs-target="#content-suporte"
-                      type="button"
-                      role="tab"
-                    >
-                      Central de Ajuda
-                    </button>
-                  </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-xl-3">
+        <div class="accordion shadow-sm rounded-4 overflow-hidden" id="menuManual" data-tabs-control>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseAcesso">
+                <i class="bi bi-person-lock me-2"></i> Acesso
+              </button>
+            </h2>
+            <div id="collapseAcesso" class="accordion-collapse collapse show" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link active text-start mb-1" data-bs-toggle="pill"
+                    data-bs-target="#content-cadastro" type="button" role="tab">
+                    Guia de Cadastro
+                  </button>
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-perfil"
+                    type="button" role="tab">
+                    Configuração de Perfil
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-9">
-          <div
-            class="tab-content bg-white p-4 p-md-5 rounded-4 shadow-sm border h-100"
-            id="v-pills-tabContent"
-          >
-            <!-- Inicio da Aba "Acesso"-->
-            <div
-              class="tab-pane fade show active"
-              id="content-cadastro"
-              role="tabpanel"
-            >
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-person-lock text-primary"></i> Realizando
-                  Cadastro
-                </h2>
-                <p>Realizando Cadastro.</p>
-
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/acesso-cadastro.gif"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>Acesse a pagina incial do Infobairro.</li>
-                    <li>Click no icone de menu na canto inferior esquerdo.</li>
-                    <li>Selecione a opção "Cadastro".</li>
-                  </ul>
-                </div>
-                <hr />
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/cadastro estatico.png"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>
-                      Preencha com os seus dados pessoas os campos "Nome
-                      Completo", "Email", "Data de nascimento".
-                    </li>
-                    <li>
-                      Infome o seu CEP ou selecione a Cidade e o bairro onde
-                      reside.
-                    </li>
-                    <li>
-                      Crie uma senha conforme os requisitos (Mínimo de 6
-                      caracteres, Uma letra minúscula, Uma letra maiúscula, Um
-                      número, Um caractere especial (#, $, etc.)).
-                    </li>
-                    <li>Clique em "Finalizar Cadastro".</li>
-                  </ul>
-                </div>
-                <hr />
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/Codigo.png"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                    style="transform: scale(1.5)"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>
-                      Será enviado um código de 6 dígitos para o seu endereço de
-                      e-mail, informe no campo disponivel.
-                    </li>
-                    <li>
-                      Caso não tenha recebido o codigo clique na opção "Reenviar
-                      Código". Lembre-se sempre de checkar a caixa de Spam.
-                    </li>
-                    <li>
-                      Com o campo preenchido corretamente clique em "Confirmar
-                      Codigo"
-                    </li>
-                  </ul>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNav">
+                <i class="bi bi-map me-2"></i> Navegação e Mapa
+              </button>
+            </h2>
+            <div id="collapseNav" class="accordion-collapse collapse" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-navegacao"
+                    type="button" role="tab">
+                    Navegação Interativa
+                  </button>
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-filtros"
+                    type="button" role="tab">
+                    Uso de Filtros
+                  </button>
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-informacao"
+                    type="button" role="tab">
+                    Estatísticas
+                  </button>
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-resultado"
+                    type="button" role="tab">
+                    Avaliação
+                  </button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!--  **************** Gerenciar Perfil *******************-->
-            <div class="tab-pane fade" id="content-perfil" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-person text-primary"></i> Gerenciando o seu
-                  Perfil
-                </h2>
-
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/acesso-configuracao.gif"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>Acesse a pagina incial do Infobairro.</li>
-                    <li>Clique no icone de menu na canto inferior esquerdo.</li>
-                    <li>Selecione a opção "Configurações".</li>
-                  </ul>
-                </div>
-                <hr />
-
-                <h3>
-                  <i class="bi bi-person text-primary"></i> Editando dados
-                  pessoais
-                </h3>
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/editarDados.gif"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>Em dados pessoas clique no botão "Editar"</li>
-                    <li>Altere o campo desejado.</li>
-                    <li>Clique em "Salvar Alterações"</li>
-                  </ul>
-                </div>
-                <hr />
-                <h3>
-                  <i class="bi bi-person text-primary"></i> Alteração de Senha
-                </h3>
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/alterarSenha.gif"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>Em Segurança clique no botão "Alterar Senha".</li>
-                    <li>Informe sua senha atual.</li>
-                    <li>
-                      Crie sua nova senha conforme os requisitos (Mínimo de 6
-                      caracteres, Uma letra minúscula, Uma letra maiúscula, Um
-                      número, Um caractere especial (#, $, etc.)).
-                    </li>
-                  </ul>
-                </div>
-                <hr />
-                <h3>
-                  <i class="bi bi-person text-primary"></i> Exclusão de conta
-                </h3>
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/excluirConta.gif"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>Passo a passo:</h5>
-                  <ul>
-                    <li>Em Zona de perigo clique no botão "Excluir Conta".</li>
-                    <li>Confirme a exclusão no botão "Sim, Excluir tudo"</li>
-                  </ul>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseComu">
+                <i class="bi bi-people me-2"></i> Comunidade
+              </button>
+            </h2>
+            <div id="collapseComu" class="accordion-collapse collapse" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-atribuicao"
+                    type="button" role="tab">
+                    Atribuição de Estrelas
+                  </button>
+                  <button class="nav-link text-start mb-1" data-bs-toggle="pill" data-bs-target="#content-comentarios"
+                    type="button" role="tab">
+                    Inserção de Comentários
+                  </button>
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-apresentacao"
+                    type="button" role="tab">
+                    Tela de Apresentação
+                  </button>
                 </div>
               </div>
             </div>
-            <!-- Fim da Aba "Acesso"-->
+          </div>
 
-            <!-- Inicio da Aba "Navegação e Mapa"-->
-
-            <!--  **************** Navegação Interativa *******************-->
-
-            <div class="tab-pane fade" id="content-navegacao" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-compass text-primary"></i> Navegação no
-                  Sistema
-                </h2>
-                <p class="text-muted">
-                  Explore o mapa interativo e acesse as principais
-                  funcionalidades da plataforma com facilidade.
-                </p>
-
-                <div class="row g-3 justify-content-center">
-                  <div class="media-placeholder">
-                    <img
-                      src="./IMG/Gif Navegação infobairro.gif"
-                      alt="Card de pré-visualização do bairro"
-                      width="100%"
-                      height="100%"
-                      draggable="false"
-                    />
-                  </div>
-                </div>
-
-                <div class="mt-4">
-                  <p>
-                    <strong>Explorando o Mapa:</strong> Nossa interface foi
-                    desenhada para ser totalmente interativa. Navegue livremente
-                    pelas regiões e, ao selecionar o marcador (pin) de qualquer
-                    bairro no mapa, uma janela de pré-visualização surgirá na
-                    parte inferior da tela, exibindo um resumo rápido com as
-                    principais estatísticas locais.
-                  </p>
-                  <div class="row g-3 justify-content-center">
-                    <div
-                      class="media-placeholder shadow-sm mb-3"
-                      style="
-                        height: 220px;
-                        overflow: hidden;
-                        border-radius: 10px;
-                      "
-                    >
-                      <img
-                        src="IMG/Menu.png"
-                        alt="Menu de ações"
-                        class="w-100 h-100"
-                        style="object-fit: contain; object-position: top"
-                        draggable="false"
-                      />
-                    </div>
-                  </div>
-
-                  <p>
-                    <strong>Seu Perfil:</strong> Ao clicar no ícone
-                    <i class="bi bi-person-lines-fill text-primary"></i> no
-                    menu, você acessa seu painel pessoal. Lá é possível
-                    gerenciar as configurações da sua conta, revisar todos os
-                    comentários que você já publicou na plataforma e encerrar a
-                    sua sessão de forma segura.
-                  </p>
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsePremium">
+                <i class="bi bi-gem me-2"></i> Benefícios Premium
+              </button>
+            </h2>
+            <div id="collapsePremium" class="accordion-collapse collapse" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-dashboard"
+                    type="button" role="tab">
+                    Dashboard
+                  </button>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="tab-pane fade" id="content-filtros" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-funnel text-primary"></i> Uso de Filtros
-                </h2>
-                <p class="text-muted">
-                  Refine sua busca e encontre exatamente a região que atende às
-                  suas necessidades.
-                </p>
-
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/Gif filtros.gif"
-                    alt="Filtros"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                    srcset=""
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <p>
-                    Procurando por algo específico? Clique no ícone de lupa para
-                    abrir a nossa gaveta de filtros inteligentes. O sistema
-                    oferece múltiplas formas de refinar sua pesquisa:
-                  </p>
-                  <ul>
-                    <li>
-                      <strong>Busca Direta:</strong> Digite o nome exato do
-                      bairro que deseja analisar.
-                    </li>
-                    <li>
-                      <strong>Filtro por Cidade:</strong> Delimite o mapa para
-                      mostrar apenas os bairros de um município específico.
-                    </li>
-                    <li>
-                      <strong>Categorias de Qualidade:</strong> Onde o sistema
-                      realmente brilha! Filtre bairros que possuem as melhores
-                      notas em categorias cruciais para você, como
-                      <strong>Infraestrutura</strong>,
-                      <strong>Segurança</strong>, <strong>Lazer</strong> e
-                      <strong>Transporte</strong>.
-                    </li>
-                  </ul>
-                  <div class="alert alert-info mt-4 border-0 shadow-sm">
-                    <i class="bi bi-info-circle-fill me-2"></i>
-                    <strong>Dica:</strong> Combine diferentes filtros para
-                    encontrar o local ideal para sua moradia ou negócio!
-                  </div>
+          <div class="accordion-item border-0 text-danger">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSuporte">
+                <i class="bi bi-shield-lock me-2"></i> Suporte e Segurança
+              </button>
+            </h2>
+            <div id="collapseSuporte" class="accordion-collapse collapse" data-bs-parent="#menuManual">
+              <div class="accordion-body p-2 bg-light">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#content-suporte"
+                    type="button" role="tab">
+                    Central de Ajuda
+                  </button>
                 </div>
               </div>
             </div>
-
-            <div class="tab-pane fade" id="content-informacao" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-card-heading text-primary"></i> Cards de
-                  Informação
-                </h2>
-                <p class="text-muted">
-                  Mergulhe em dados aprofundados sobre cada região através de
-                  relatórios segmentados.
-                </p>
-
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/Cards.png"
-                    alt="Detalhes"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                    style="transform: scale(1.5)"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <p>
-                    Ao abrir os detalhes de um bairro, as informações não são
-                    jogadas todas de uma vez. Elas são organizadas em
-                    <strong>Cards Temáticos</strong> que funcionam como atalhos
-                    visuais.
-                  </p>
-                  <p>
-                    Clique em qualquer um dos cards para expandir e ler
-                    informações detalhadas sobre aquela estatística
-                    correspondente. Por exemplo: ao selecionar o card de
-                    <strong>“Entrega”</strong>, o sistema exibirá gráficos,
-                    dados de acessibilidade e avaliações sobre como funcionam os
-                    serviços de delivery, transportadoras e correios naquelas
-                    ruas específicas.
-                  </p>
-                </div>
-
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/CardInformativo.png"
-                    alt="Exemplo de Card Informativo"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                    style="transform: scale(3)"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>
-                    <i class="bi bi-patch-question text-primary me-2"></i
-                    >Entenda as Métricas
-                  </h5>
-                  <p>
-                    Para garantir que você compreenda exatamente como cada nota
-                    é calculada, disponibilizamos guias explicativos em todos os
-                    indicadores. Ao clicar no ícone de ajuda
-                    <i class="bi bi-info-circle-fill" style="color: #555"></i>
-                    localizado no canto de cada card, um painel informativo será
-                    exibido com a definição detalhada daquela categoria.
-                  </p>
-
-                  <div
-                    class="alert alert-light border-start border-primary border-4 py-2"
-                  >
-                    <small class="text-muted">
-                      <i class="bi bi-lightbulb me-1"></i>
-                      <strong>Exemplo Visual:</strong> Na imagem acima, vemos o
-                      informativo do card de <strong>Entrega</strong>, explica
-                      que a nota considera a facilidade de acesso de
-                      transportadoras, a cobertura de aplicativos de delivery ou
-                      a frequência de distribuição postal na região.
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tab-pane fade" id="content-resultado" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-star-half text-primary"></i> Avaliação
-                  Comunitária
-                </h2>
-                <p class="text-muted">
-                  Sua voz tem poder! Compartilhe sua experiência real e ajude a
-                  construir um mapa mais fiel à realidade de cada região.
-                </p>
-
-                <div class="media-placeholder mb-4">
-                  <img
-                    src="./IMG/MeuBairroAvaliar.png"
-                    alt="Demonstração da tela de avaliação"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <div class="mt-4">
-                  <h5>Como contribuir?</h5>
-                  <p>
-                    Acreditamos que ninguém conhece melhor um lugar do que quem
-                    vive nele. Por isso, nossa plataforma libera um canal de
-                    feedback exclusivo para moradores.
-                  </p>
-
-                  <div class="row g-4 align-items-center">
-                    <div class="col-lg-7">
-                      <ul class="list-unstyled">
-                        <li class="mb-3">
-                          <i
-                            class="bi bi-check-circle-fill text-success me-2"
-                          ></i>
-                          <strong>Reconhecimento Automático:</strong> O sistema
-                          identifica se o bairro visualizado é o mesmo que você
-                          cadastrou no seu perfil.
-                        </li>
-                        <li class="mb-3">
-                          <i
-                            class="bi bi-check-circle-fill text-success me-2"
-                          ></i>
-                          <strong>Acesso Rápido:</strong> Se você for um morador
-                          local, o botão
-                          <button
-                            class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto"
-                            type="button"
-                          >
-                            <i class="bi bi-star-fill me-2"></i>Avaliar!
-                          </button>
-                          aparecerá automaticamente.
-                        </li>
-                        <li>
-                          <i
-                            class="bi bi-check-circle-fill text-success me-2"
-                          ></i>
-                          <strong>Impacto Real:</strong> Suas notas de 1 a 5
-                          alimentam os gráficos de infraestrutura, segurança e
-                          lazer que todos os outros usuários consultam.
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="col-lg-5">
-                      <div
-                        class="p-3 border rounded-3 bg-light shadow-sm text-center"
-                      >
-                        <h6
-                          class="text-uppercase fw-bold small text-muted mb-3"
-                        >
-                          Teste a Interação abaixo:
-                        </h6>
-
-                        <div class="star-rating-wrapper">
-                          <div
-                            class="d-flex justify-content-center align-items-center mb-2"
-                          >
-                            <i
-                              class="bi bi-star-fill star-icon-custom"
-                              data-value="1"
-                            ></i>
-                            <i
-                              class="bi bi-star-fill star-icon-custom"
-                              data-value="2"
-                            ></i>
-                            <i
-                              class="bi bi-star-fill star-icon-custom"
-                              data-value="3"
-                            ></i>
-                            <i
-                              class="bi bi-star-fill star-icon-custom"
-                              data-value="4"
-                            ></i>
-                            <i
-                              class="bi bi-star-fill star-icon-custom"
-                              data-value="5"
-                            ></i>
-                          </div>
-                          <input type="hidden" name="rating" value="0" />
-                          <div
-                            class="feedback-text fw-bold"
-                            style="min-height: 24px"
-                          >
-                            Toque para votar
-                          </div>
-                        </div>
-
-                        <small class="text-muted mt-2 d-block">
-                          Experimente passar o mouse ou tocar nas estrelas para
-                          ver o sistema em ação.
-                        </small>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="alert alert-info mt-4 border-0 shadow-sm">
-                    <i class="bi bi-info-circle-fill me-2"></i>
-                    <strong>Lembre-se:</strong> Você pode editar sua avaliação a
-                    qualquer momento caso sua percepção sobre o bairro mude.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- FIm da Aba "Navegação e mapa"-->
-
-            <!-- Inicio da Aba "Comunidade e Interação"-->
-
-            <div class="tab-pane fade" id="content-atribuicao" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-people text-primary"></i> Avaliação dos
-                  bairros
-                </h2>
-                <p>
-                  Veja como colaborar com outros usuários e participar das
-                  notas.
-                </p>
-
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/Inserção de estrelas.gif"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <h5>Como avaliar um bairro:</h5>
-                <ul>
-                  <li>Selecione o bairro em que você reside.</li>
-                  <li>
-                    Clique no card da categoria desejada (ex: Segurança, Saúde,
-                    Lazer)
-                  </li>
-                  <li>
-                    Clique nas estrelas correspondentes para registrar sua nota
-                    de 1 a 5
-                  </li>
-                </ul>
-                <div class="alert alert-info" role="alert">
-                  <i class="bi bi-info-circle"></i>
-                  <strong>Lembre-se:</strong>Apenas moradores cadastrados podem
-                  avaliar o bairro através da inserção de estrelas!
-                </div>
-              </div>
-            </div>
-
-            <!--  **************** Inserção de Comentarios *******************-->
-
-            <div class="tab-pane fade" id="content-comentarios" role="tabpanel">
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-people text-primary"></i>
-                  Interação
-                </h2>
-                <p>
-                  Veja como colaborar com outros usuários e participar da aba
-                  comentarios.
-                </p>
-
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/inserção de comentários.gif"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-
-                <h5>Como compartilhar sua experiência:</h5>
-                <ul>
-                  <li>
-                    Escreva seu comentário sobre o bairro, sendo morador ou
-                    visitante (informação será mostrada para quem vizualizar seu
-                    comentário)
-                  </li>
-                  <li>Seja honesto e compartilhe apenas fatos verdadeiros</li>
-                  <li>
-                    Mantenha o respeito e a empatia: evite palavras de baixo
-                    calão e ofensas
-                  </li>
-                  <li>
-                    Clique no botão
-                    <button
-                      class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto"
-                      type="button"
-                    >
-                      <i class="bi bi-star-fill me-2"></i>Enviar
-                    </button>
-                    para publicar sua contribuição à comunidade
-                  </li>
-                </ul>
-                <div class="alert alert-info" role="alert">
-                  <i class="bi bi-info-circle"></i>
-                  <strong>Lembre-se:</strong> Comentários que violarem nossas
-                  diretrizes de respeito e convivência podem ser removidos.
-                  Contamos com a sua colaboração para uma plataforma melhor!
-                </div>
-              </div>
-            </div>
-
-            <!--  **************** Tela de Apresentação *******************-->
-            <div
-              class="tab-pane fade"
-              id="content-apresentacao"
-              role="tabpanel"
-            >
-              <div class="content-card">
-                <h2>
-                  <i class="bi bi-people text-primary"></i>
-                  Apresentação
-                </h2>
-                <p>Veja como acessar a tela de apresentação.</p>
-
-                <div class="media-placeholder">
-                  <img
-                    src="./IMG/página de interação.gif"
-                    alt="Card de pré-visualização do bairro"
-                    width="100%"
-                    height="100%"
-                    draggable="false"
-                  />
-                </div>
-                <h5>
-                  Como acessar a tela de apresentação das avaliações gerais:
-                </h5>
-                <ul>
-                  <li>
-                    Na página principal do InfoBairro, selecione o bairro
-                    escolhido clicando em cima do PIN colorido onde contém a
-                    numeração de nota geral
-                  </li>
-                  <li>
-                    Ao clicar, irá aparecer um card na parte inferior da tela
-                    apresentando um resumo das avaliações
-                  </li>
-                  <li>
-                    Clique no botão
-                    <button
-                      class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto"
-                      type="button"
-                    >
-                      <i class="bi bi-star-fill me-2"></i>Detalhes Completos
-                    </button>
-                  </li>
-                  <li>
-                    O usuário será levado a página de Tela de Apresentação, onde
-                    mostra os cards das avaliações específicas (Segurança,
-                    Saúde, Educação...), A aba de comentários sobre a localidade
-                    ; contendo todas as informações sucintas e atualizadas sobre
-                    o bairro.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Fim da Aba "Comunidade e Interação"-->
-
-            <!-- Inicio da Aba "Beneficios Premium"-->
-            <div class="tab-pane fade" id="content-dashboard" role="tabpanel">
-              <div class="content-section text-center">
-                <div class="mb-4">
-                  <span class="badge bg-warning text-dark mb-2">Exclusivo</span>
-                  <h2>Benefícios Premium</h2>
-                </div>
-
-                <div class="sub-topic text-start">
-                  <h4>Dashboard Avançado</h4>
-                  <p>
-                    Acesse métricas exclusivas, KPIs em tempo real e relatórios
-                    exportáveis que só o plano Premium oferece.
-                  </p>
-                  <div class="media-placeholder">
-                    <span>[Inserir Conteudo]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- FIm da Aba "Beneficios Premium"-->
-
-            <!-- Inicio da Aba "Suporte e Segurança"-->
-            <div class="tab-pane fade" id="content-suporte" role="tabpanel">
-              <div class="content-card">
-                <div class="accordion accordion-flush" id="accordionLegal">
-                  <div class="accordion-item mb-3 border rounded">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed fw-bold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sup1"
-                      >
-                        Suporte ao Usuário
-                      </button>
-                    </h2>
-                    <div
-                      id="sup1"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionLegal"
-                    >
-                      <div class="accordion-body">
-                        <h2>
-                          <br />
-                          <i class="bi bi-shield-check text-primary"></i>
-                          Suporte e Segurança
-                        </h2>
-
-                        <p style="color: #635e5e">
-                          Sua segurança é nossa prioridade. Entenda as proteções
-                          e como pedir ajuda.
-                        </p>
-                        <h5>Como contatar o nosso suporte:</h5>
-                        <ul>
-                          <li>Clique na aba de Contato</li>
-                          <li>Copie o email de suporte</li>
-                          <li>
-                            Envie um email detalhando seu problema ou dúvida
-                          </li>
-                        </ul>
-                        <br /><br />
-                        <div class="media-placeholder">
-                          <span
-                            ><img
-                              src="./IMG/Acesso-contato.png"
-                              alt=""
-                              style="max-width: 100%; height: auto"
-                              draggable="false"
-                          /></span>
-                        </div>
-                        <br />
-                        <br />
-
-                        <br />
-                        <br />
-                        <div class="media-placeholder">
-                          <span
-                            ><img
-                              src="./IMG/Contato-Infobairro.png"
-                              alt=""
-                              style="max-width: 100%; height: auto"
-                              draggable="false"
-                          /></span>
-                        </div>
-                        <br />
-                        <div class="mt-4">
-                          <h5>Boas Práticas:</h5>
-                          <ol>
-                            <li>Nunca compartilhe sua senha com terceiros.</li>
-                            <li>
-                              Evite repetir senhas em sites e serviços diferentes.
-                            </li>
-                            <li>
-                              Em caso de dúvidas, nosso chat funciona 24/7.
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item mb-3 border rounded">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed fw-bold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sup2"
-                      >
-                        Política de Privacidade
-                      </button>
-                    </h2>
-                    <div
-                      id="sup2"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionLegal"
-                    >
-                      <div class="accordion-body">
-                        <br />
-                        <br />
-                        <h4 style="color: #838383">
-                          Como tratamos seus dados sob a LGPD.
-                        </h4>
-                        <br />
-                        <br />
-
-                        <h5>1. Coleta de Dados</h5>
-
-                        <br />
-                        O InfoBairro poderá coletar os seguintes dados:
-                        <ul>
-                          <br />
-                          <li>
-                            Dados cadastrais fornecidos voluntariamente pelo
-                            usuário (quando aplicável);
-                          </li>
-                          <br />
-                          <li>
-                            Dados de uso e navegação dentro da plataforma;
-                          </li>
-                          <br />
-                          <li>
-                            Dados de localização: obtidos via navegador ou
-                            dispositivo para identificar se o usuário é morador
-                            ou visitante de um bairro;
-                          </li>
-                          <br />
-                          <li>
-                            Informações técnicas: endereço IP, tipo de navegador
-                            e modelo do dispositivo.
-                          </li>
-                        </ul>
-                        <br />
-                        <h5>2. Uso dos dados de localização</h5>
-                        <br />
-                        Os dados de localização são utilizados exclusivamente
-                        para:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>
-                            Identificar a relação do usuário com o bairro
-                            avaliado (morador ou visitante);
-                          </li>
-                          <br />
-                          <li>
-                            Melhorar a contextualização das avaliações e
-                            comentários;
-                          </li>
-                          <br />
-                          <li>
-                            Aprimorar a experiência do usuário e a precisão das
-                            informações exibidas.
-                          </li>
-                        </ul>
-                        <br />
-                        <br />
-                        <p>
-                          <b>Importante:</b> O InfoBairro não utiliza dados de
-                          localização para rastreamento contínuo, nem para fins
-                          comerciais ou publicitários invasivos.
-                        </p>
-                        <br />
-                        <h5>3. Compartilhamento de Dados</h5>
-                        <br />
-                        O compartilhamento de dados ocorre de forma limitada:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>
-                            Prestadores de serviços: Como o Google Maps,
-                            estritamente para funcionalidades de mapa e
-                            geolocalização;
-                          </li>
-                          <br />
-                          <li>
-                            Autoridades públicas: Apenas quando exigido por lei
-                            ou ordem judicial;
-                          </li>
-                          <br />
-                          <li>
-                            Não há comercialização ou venda de dados pessoais
-                            para terceiros.
-                          </li>
-                        </ul>
-                        <br />
-                        <h5>4. Armazenamento e Segurança</h5>
-                        <br />
-                        Os dados são armazenados em ambientes seguros,
-                        protegidos por medidas técnicas contra acessos não
-                        autorizados e vazamentos. Eles são mantidos apenas pelo
-                        tempo necessário para cumprir as finalidades descritas
-                        nesta política.
-
-                        <br />
-                        <br />
-                        <h5>5. Direitos do Usuário</h5>
-                        <br />
-                        Nos termos da lei, o usuário tem direito a:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>
-                            Confirmar a existência de tratamento de seus dados;
-                          </li>
-                          <br />
-                          <li>
-                            Acessar, corrigir ou atualizar suas informações
-                            pessoais;
-                          </li>
-                          <br />
-                          <li>
-                            Solicitar a exclusão ou anonimização de dados
-                            (quando aplicável);
-                          </li>
-                          <br />
-                          <li>
-                            Revogar consentimentos previamente concedidos.
-                          </li>
-                        </ul>
-                        <br />
-                        <p>
-                          <b
-                            >As solicitações podem ser feitas através dos canais
-                            oficiais de contato do InfoBairro.</b
-                          >
-                        </p>
-                        <br />
-                        <h5>6. Serviços de Terceiros e Atualizações</h5>
-                        <br />
-                        A utilização de mapas está sujeita às políticas do
-                        Google. Recomendamos a leitura dos termos desses
-                        fornecedores.
-                        <br />
-
-                        Esta Política pode ser atualizada periodicamente. Ao
-                        continuar utilizando o InfoBairro, o usuário declara
-                        estar ciente da coleta e uso de seus dados conforme aqui
-                        descrito.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item mb-3 border rounded">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed fw-bold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sup3"
-                      >
-                        Termos de Uso
-                      </button>
-                    </h2>
-                    <div
-                      id="sup3"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionLegal"
-                    >
-                      <div class="accordion-body">
-                        <h5>1. Sobre os Termos de Uso</h5>
-                        <br />
-                        Antes de utilizar a plataforma InfoBairro, é importante
-                        compreender que o acesso ao site implica na leitura e
-                        concordância com os Termos de Uso da plataforma.
-                        <br />
-                        Esses termos existem para garantir que o uso das
-                        informações disponibilizadas seja feito de forma
-                        responsável, ética e dentro da legislação vigente.
-                        <br />
-                        Caso o usuário não concorde com qualquer condição
-                        apresentada nos termos, recomenda-se que não utilize a
-                        plataforma.
-
-                        <br />
-                        <br />
-                        <h5>2. Finalidade da Plataforma</h5>
-                        <br />
-                        O InfoBairro foi criado com o objetivo de reunir e
-                        disponibilizar informações públicas sobre bairros de
-                        forma organizada e acessível.
-                        <br />
-                        As informações presentes na plataforma podem ter origem
-                        em:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>
-                            Bases de dados públicas e portais governamentais
-                          </li>
-                          <li>Estudos e relatórios técnicos</li>
-                          <li>Levantamentos estatísticos</li>
-                          <li>Pesquisas populares e relatos comunitários</li>
-                          <li>Outras fontes públicas disponíveis</li>
-                        </ul>
-                        <br />
-                        O propósito do site é facilitar o acesso a informações,
-                        permitindo que os usuários conheçam melhor diferentes
-                        regiões.
-                        <br />
-                        <br />
-                        <h5>3. Uso das Informações</h5>
-                        <br />
-                        É importante entender que todas as informações
-                        apresentadas na plataforma possuem caráter
-                        exclusivamente informativo. Isso significa que:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>
-                            O InfoBairro não emite opiniões ou recomendações
-                            sobre bairros.
-                          </li>
-                          <li>
-                            O site não classifica bairros como melhores ou
-                            piores para morar ou investir.
-                          </li>
-                          <li>
-                            As informações não substituem análises pessoais ou
-                            profissionais.
-                          </li>
-                        </ul>
-
-                        O usuário deve utilizar os dados como referência
-                        informativa, sempre realizando suas próprias análises.
-                        <br />
-                        <br />
-                        <h5>4. Atualização dos Dados</h5>
-                        <br />
-                        Algumas informações disponíveis na plataforma podem
-                        sofrer alterações ao longo do tempo.
-                        <br />
-                        Isso acontece porque muitos dados são provenientes de
-                        bases públicas que podem ser atualizadas periodicamente.
-                        <br />
-                        Por esse motivo:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>
-                            Algumas informações podem estar desatualizadas ou
-                            incompletas.
-                          </li>
-                          <li>
-                            O InfoBairro não garante precisão absoluta para
-                            finalidades específicas.
-                          </li>
-                        </ul>
-                        <br />
-                        Sempre que possível, recomenda-se consultar fontes
-                        oficiais complementares.
-                        <br />
-                        <br />
-                        <h5>5. Serviços de Terceiros</h5>
-                        <br />
-                        A plataforma pode utilizar serviços externos, como
-                        sistemas de mapas e geolocalização.
-                        <br />
-                        Por exemplo, a integração com o Google Maps permite
-                        visualizar a localização de bairros e pontos de
-                        interesse.
-                        <br />
-                        Esses serviços são fornecidos por terceiros e podem
-                        possuir regras próprias de uso, independentes da
-                        plataforma InfoBairro.
-                        <br />
-                        <br />
-                        <h5>6. Responsabilidade do Usuário</h5>
-                        <br />
-                        Ao utilizar a plataforma, o usuário concorda em utilizar
-                        as informações de forma responsável.
-                        <br />
-                        O InfoBairro não se responsabiliza por:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>
-                            Decisões tomadas com base nas informações
-                            apresentadas
-                          </li>
-                          <li>Interpretações pessoais dos dados</li>
-                          <li>
-                            Danos ou prejuízos decorrentes do uso das
-                            informações
-                          </li>
-                        </ul>
-                        Cada usuário é responsável pela forma como utiliza o
-                        conteúdo disponibilizado.
-                        <br />
-                        <br />
-                        <h5>7. Uso Indevido das Informações</h5>
-
-                        <br />
-                        Para manter um ambiente informativo e respeitoso, é
-                        proibido utilizar os dados da plataforma para:
-                        <br /><br />
-                        <ul>
-                          <li>Atividades ilegais</li>
-                          <li>Difamação de bairros ou comunidades</li>
-                          <li>Discurso discriminatório</li>
-                          <li>
-                            Manipulação de informações para enganar terceiros
-                          </li>
-                        </ul>
-
-                        O uso responsável da informação contribui para manter a
-                        confiabilidade da plataforma.
-                        <br />
-                        <br />
-                        <h5>8. Conteúdo Publicado por Usuários</h5>
-                        <br />
-                        Caso a plataforma permita a participação de usuários
-                        (comentários, avaliações ou relatos), algumas regras
-                        devem ser seguidas.
-                        <br />
-                        <br />
-                        <h5 style="color: #838383">
-                          Responsabilidade pelo conteúdo
-                        </h5>
-                        <br />
-                        Mesmo que a publicação seja anônima, o usuário continua
-                        sendo legalmente responsável pelo que publica.
-                        <br />
-                        <br />
-                        <h5 style="color: #838383">Conteúdos proibidos</h5>
-                        <br />
-                        Não é permitido publicar:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>Propaganda ou publicidade não autorizada</li>
-                          <li>Dados pessoais (telefone, endereço, e-mail)</li>
-                          <li>
-                            Conteúdos ofensivos, discriminatórios ou que incitem
-                            violência
-                          </li>
-                        </ul>
-                        <br />
-                        <br />
-                        <h5 style="color: #838383">Moderação</h5>
-                        <br />
-                        A plataforma pode remover conteúdos e bloquear usuários
-                        que violem as regras de uso.
-                        <br />
-                        <br />
-                        <h5>9. Direitos Autorais</h5>
-                        <br />
-                        A estrutura da plataforma, textos autorais, identidade
-                        visual e marca InfoBairro são protegidos por direitos de
-                        propriedade intelectual.
-                        <br />
-                        <br />
-                        <b
-                          >A reprodução ou exploração comercial desse conteúdo
-                          não é permitida sem autorização.</b
-                        >
-                        <br />
-                        <br />
-                        <h5>10. Atualizações dos Termos</h5>
-                        <br />
-                        Os Termos de Uso podem ser atualizados a qualquer
-                        momento para melhorar a plataforma ou adequá-la à
-                        legislação.
-                        <br />
-                        <br />
-                        O uso contínuo do site após alterações significa que o
-                        usuário concorda com as novas condições.
-                        <br />
-                        <br />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item border rounded">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed fw-bold"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#sup4"
-                      >
-                        Política de Comunidade
-                      </button>
-                    </h2>
-                    <div
-                      id="sup4"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionLegal"
-                    >
-                      <div class="accordion-body">
-                        <br />
-                        <h4 style="color: #838383">
-                          Diretrizes de comportamento e ética.
-                        </h4>
-                        <br />
-
-                        <h5>1. Objetivo da Comunidade</h5>
-                        <br />
-
-                        O espaço de avaliações e comentários foi criado para que
-                        usuários compartilhem experiências, percepções e
-                        informações gerais sobre bairros, sempre de forma
-                        responsável e respeitosa.
-                        <br />
-                        <br />
-                        <h5>2. Anonimato com Responsabilidade</h5>
-                        <br />
-                        Os comentários são publicados de forma anônima; O
-                        anonimato não deve ser interpretado como permissão para
-                        abusos; Cada usuário é responsável pelo conteúdo que
-                        publica, inclusive perante a legislação vigente.
-                        <br />
-                        <br />
-                        <br />
-                        <h5>3. O Que É Permitido</h5>
-                        <br />
-                        São bem-vindos comentários que:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>
-                            Relatem experiências pessoais de forma genérica e
-                            respeitosa;
-                          </li>
-                          <li>
-                            Descrevam características do bairro (infraestrutura,
-                            transporte, comércio, lazer, etc.);
-                          </li>
-                          <li>
-                            Contribuam para o entendimento coletivo, sem ataques
-                            ou generalizações ofensivas;
-                          </li>
-                          <li>
-                            Se mantenham dentro de um tom informativo e
-                            construtivo.
-                          </li>
-                        </ul>
-                        <br />
-                        <h5>4. O Que Não É Permitido</h5>
-                        <br />
-                        Não são permitidos conteúdos que contenham:
-                        <br /><br />
-                        <ul>
-                          <li>
-                            Divulgação de serviços, anúncios, ofertas ou
-                            autopromoção;
-                          </li>
-                          <li>
-                            Telefones, endereços, e-mails, links de contato ou
-                            redes sociais;
-                          </li>
-                          <li>Dados pessoais próprios ou de terceiros;</li>
-                          <li>
-                            Ofensas, xingamentos, ameaças ou ataques pessoais;
-                          </li>
-                          <li>
-                            Conteúdo difamatório, calunioso ou que atribua
-                            crimes sem comprovação;
-                          </li>
-                          <li>
-                            Discurso de ódio, discriminação, preconceito ou
-                            incitação à violência;
-                          </li>
-                          <li>
-                            Informações falsas, sensacionalistas ou
-                            deliberadamente enganosas.
-                          </li>
-                        </ul>
-                        <br />
-
-                        <h5>5. Moderação e Medidas Disciplinares</h5>
-                        <br />
-                        Para manter a qualidade, o InfoBairro poderá realizar
-                        moderação manual ou automática e aplicar:
-                        <br />
-                        <br />
-                        <ul>
-                          <li>Remoção total ou parcial do comentário;</li>
-                          <li>
-                            Advertência, suspensão temporária ou
-                            <b>bloqueio permanente</b> da conta em casos graves
-                            ou reincidência.
-                          </li>
-                        </ul>
-                        <br />
-                        <h5>6. Neutralidade do InfoBairro</h5>
-                        <br />
-                        As opiniões expressas representam exclusivamente a visão
-                        de quem as publicou, não refletindo a posição oficial ou
-                        recomendações do InfoBairro.
-                        <br />
-                        <br />
-                        <h5>7. Atualizações</h5>
-                        <br />
-                        Esta política pode ser atualizada a qualquer momento. Ao
-                        participar, o usuário declara estar ciente e concorda em
-                        contribuir para um ambiente seguro e equilibrado.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Fim da Aba "Suporte e Segurança"-->
           </div>
         </div>
       </div>
-    </div>
 
-    <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+      <div class="col-lg-9">
+        <div class="tab-content bg-white p-4 p-md-5 rounded-4 shadow-sm border h-100" id="v-pills-tabContent">
+          <!-- Inicio da Aba "Acesso"-->
+          <div class="tab-pane fade show active" id="content-cadastro" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-person-lock text-primary"></i> Realizando
+                Cadastro
+              </h2>
+              <p>Realizando Cadastro.</p>
+
+              <div class="media-placeholder">
+                <img src="./IMG/acesso-cadastro.gif" alt="Card de pré-visualização do bairro" width="100%" height="100%"
+                  draggable="false" />
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>Acesse a pagina incial do Infobairro.</li>
+                  <li>Click no icone de menu na canto inferior esquerdo.</li>
+                  <li>Selecione a opção "Cadastro".</li>
+                </ul>
+              </div>
+              <hr />
+              <div class="media-placeholder">
+                <img src="./IMG/cadastro estatico.png" alt="Card de pré-visualização do bairro" width="100%"
+                  height="100%" draggable="false" />
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>
+                    Preencha com os seus dados pessoas os campos "Nome
+                    Completo", "Email", "Data de nascimento".
+                  </li>
+                  <li>
+                    Infome o seu CEP ou selecione a Cidade e o bairro onde
+                    reside.
+                  </li>
+                  <li>
+                    Crie uma senha conforme os requisitos (Mínimo de 6
+                    caracteres, Uma letra minúscula, Uma letra maiúscula, Um
+                    número, Um caractere especial (#, $, etc.)).
+                  </li>
+                  <li>Clique em "Finalizar Cadastro".</li>
+                </ul>
+              </div>
+              <hr />
+              <div class="media-placeholder">
+                <img src="./IMG/Codigo.png" alt="Card de pré-visualização do bairro" width="100%" height="100%"
+                  draggable="false" style="transform: scale(1.5)" />
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>
+                    Será enviado um código de 6 dígitos para o seu endereço de
+                    e-mail, informe no campo disponivel.
+                  </li>
+                  <li>
+                    Caso não tenha recebido o codigo clique na opção "Reenviar
+                    Código". Lembre-se sempre de checkar a caixa de Spam.
+                  </li>
+                  <li>
+                    Com o campo preenchido corretamente clique em "Confirmar
+                    Codigo"
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--  **************** Gerenciar Perfil *******************-->
+          <div class="tab-pane fade" id="content-perfil" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-person text-primary"></i> Gerenciando o seu
+                Perfil
+              </h2>
+
+              <div class="media-placeholder">
+                <img src="./IMG/acesso-configuracao.gif" alt="Card de pré-visualização do bairro" width="100%"
+                  height="100%" draggable="false" />
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>Acesse a pagina incial do Infobairro.</li>
+                  <li>Clique no icone de menu na canto inferior esquerdo.</li>
+                  <li>Selecione a opção "Configurações".</li>
+                </ul>
+              </div>
+              <hr />
+
+              <h3>
+                <i class="bi bi-person text-primary"></i> Editando dados
+                pessoais
+              </h3>
+              <div class="media-placeholder">
+                <img src="./IMG/editarDados.gif" alt="Card de pré-visualização do bairro" width="100%" height="100%"
+                  draggable="false" />
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>Em dados pessoas clique no botão "Editar"</li>
+                  <li>Altere o campo desejado.</li>
+                  <li>Clique em "Salvar Alterações"</li>
+                </ul>
+              </div>
+              <hr />
+              <h3>
+                <i class="bi bi-person text-primary"></i> Alteração de Senha
+              </h3>
+              <div class="media-placeholder">
+                <img src="./IMG/alterarSenha.gif" alt="Card de pré-visualização do bairro" width="100%" height="100%"
+                  draggable="false" />
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>Em Segurança clique no botão "Alterar Senha".</li>
+                  <li>Informe sua senha atual.</li>
+                  <li>
+                    Crie sua nova senha conforme os requisitos (Mínimo de 6
+                    caracteres, Uma letra minúscula, Uma letra maiúscula, Um
+                    número, Um caractere especial (#, $, etc.)).
+                  </li>
+                </ul>
+              </div>
+              <hr />
+              <h3>
+                <i class="bi bi-person text-primary"></i> Exclusão de conta
+              </h3>
+              <div class="media-placeholder">
+                <img src="./IMG/excluirConta.gif" alt="Card de pré-visualização do bairro" width="100%" height="100%"
+                  draggable="false" />
+              </div>
+
+              <div class="mt-4">
+                <h5>Passo a passo:</h5>
+                <ul>
+                  <li>Em Zona de perigo clique no botão "Excluir Conta".</li>
+                  <li>Confirme a exclusão no botão "Sim, Excluir tudo"</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Fim da Aba "Acesso"-->
+
+          <!-- Inicio da Aba "Navegação e Mapa"-->
+
+          <!--  **************** Navegação Interativa *******************-->
+
+          <div class="tab-pane fade" id="content-navegacao" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-compass text-primary"></i> Navegação no
+                Sistema
+              </h2>
+              <p class="text-muted">
+                Explore o mapa interativo e acesse as principais
+                funcionalidades da plataforma com facilidade.
+              </p>
+
+              <div class="row g-3 justify-content-center">
+                <div class="media-placeholder">
+                  <img src="./IMG/Gif Navegação infobairro.gif" alt="Card de pré-visualização do bairro" width="100%"
+                    height="100%" draggable="false" />
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <p>
+                  <strong>Explorando o Mapa:</strong> Nossa interface foi
+                  desenhada para ser totalmente interativa. Navegue livremente
+                  pelas regiões e, ao selecionar o marcador (pin) de qualquer
+                  bairro no mapa, uma janela de pré-visualização surgirá na
+                  parte inferior da tela, exibindo um resumo rápido com as
+                  principais estatísticas locais.
+                </p>
+                <div class="row g-3 justify-content-center">
+                  <div class="media-placeholder shadow-sm mb-3" style="
+                        height: 220px;
+                        overflow: hidden;
+                        border-radius: 10px;
+                      ">
+                    <img src="IMG/Menu.png" alt="Menu de ações" class="w-100 h-100"
+                      style="object-fit: contain; object-position: top" draggable="false" />
+                  </div>
+                </div>
+
+                <p>
+                  <strong>Seu Perfil:</strong> Ao clicar no ícone
+                  <i class="bi bi-person-lines-fill text-primary"></i> no
+                  menu, você acessa seu painel pessoal. Lá é possível
+                  gerenciar as configurações da sua conta, revisar todos os
+                  comentários que você já publicou na plataforma e encerrar a
+                  sua sessão de forma segura.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="content-filtros" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-funnel text-primary"></i> Uso de Filtros
+              </h2>
+              <p class="text-muted">
+                Refine sua busca e encontre exatamente a região que atende às
+                suas necessidades.
+              </p>
+
+              <div class="media-placeholder">
+                <img src="./IMG/Gif filtros.gif" alt="Filtros" width="100%" height="100%" draggable="false" srcset="" />
+              </div>
+
+              <div class="mt-4">
+                <p>
+                  Procurando por algo específico? Clique no ícone de lupa para
+                  abrir a nossa gaveta de filtros inteligentes. O sistema
+                  oferece múltiplas formas de refinar sua pesquisa:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Busca Direta:</strong> Digite o nome exato do
+                    bairro que deseja analisar.
+                  </li>
+                  <li>
+                    <strong>Filtro por Cidade:</strong> Delimite o mapa para
+                    mostrar apenas os bairros de um município específico.
+                  </li>
+                  <li>
+                    <strong>Categorias de Qualidade:</strong> Onde o sistema
+                    realmente brilha! Filtre bairros que possuem as melhores
+                    notas em categorias cruciais para você, como
+                    <strong>Infraestrutura</strong>,
+                    <strong>Segurança</strong>, <strong>Lazer</strong> e
+                    <strong>Transporte</strong>.
+                  </li>
+                </ul>
+                <div class="alert alert-info mt-4 border-0 shadow-sm">
+                  <i class="bi bi-info-circle-fill me-2"></i>
+                  <strong>Dica:</strong> Combine diferentes filtros para
+                  encontrar o local ideal para sua moradia ou negócio!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="content-informacao" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-card-heading text-primary"></i> Cards de
+                Informação
+              </h2>
+              <p class="text-muted">
+                Mergulhe em dados aprofundados sobre cada região através de
+                relatórios segmentados.
+              </p>
+
+              <div class="media-placeholder">
+                <img src="./IMG/Cards.png" alt="Detalhes" width="100%" height="100%" draggable="false"
+                  style="transform: scale(1.5)" />
+              </div>
+
+              <div class="mt-4">
+                <p>
+                  Ao abrir os detalhes de um bairro, as informações não são
+                  jogadas todas de uma vez. Elas são organizadas em
+                  <strong>Cards Temáticos</strong> que funcionam como atalhos
+                  visuais.
+                </p>
+                <p>
+                  Clique em qualquer um dos cards para expandir e ler
+                  informações detalhadas sobre aquela estatística
+                  correspondente. Por exemplo: ao selecionar o card de
+                  <strong>“Entrega”</strong>, o sistema exibirá gráficos,
+                  dados de acessibilidade e avaliações sobre como funcionam os
+                  serviços de delivery, transportadoras e correios naquelas
+                  ruas específicas.
+                </p>
+              </div>
+
+              <div class="media-placeholder">
+                <img src="./IMG/CardInformativo.png" alt="Exemplo de Card Informativo" width="100%" height="100%"
+                  draggable="false" style="transform: scale(3)" />
+              </div>
+
+              <div class="mt-4">
+                <h5>
+                  <i class="bi bi-patch-question text-primary me-2"></i>Entenda as Métricas
+                </h5>
+                <p>
+                  Para garantir que você compreenda exatamente como cada nota
+                  é calculada, disponibilizamos guias explicativos em todos os
+                  indicadores. Ao clicar no ícone de ajuda
+                  <i class="bi bi-info-circle-fill" style="color: #555"></i>
+                  localizado no canto de cada card, um painel informativo será
+                  exibido com a definição detalhada daquela categoria.
+                </p>
+
+                <div class="alert alert-light border-start border-primary border-4 py-2">
+                  <small class="text-muted">
+                    <i class="bi bi-lightbulb me-1"></i>
+                    <strong>Exemplo Visual:</strong> Na imagem acima, vemos o
+                    informativo do card de <strong>Entrega</strong>, explica
+                    que a nota considera a facilidade de acesso de
+                    transportadoras, a cobertura de aplicativos de delivery ou
+                    a frequência de distribuição postal na região.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="content-resultado" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-star-half text-primary"></i> Avaliação
+                Comunitária
+              </h2>
+              <p class="text-muted">
+                Sua voz tem poder! Compartilhe sua experiência real e ajude a
+                construir um mapa mais fiel à realidade de cada região.
+              </p>
+
+              <div class="media-placeholder mb-4">
+                <img src="./IMG/MeuBairroAvaliar.png" alt="Demonstração da tela de avaliação" width="100%" height="100%"
+                  draggable="false" />
+              </div>
+
+              <div class="mt-4">
+                <h5>Como contribuir?</h5>
+                <p>
+                  Acreditamos que ninguém conhece melhor um lugar do que quem
+                  vive nele. Por isso, nossa plataforma libera um canal de
+                  feedback exclusivo para moradores.
+                </p>
+
+                <div class="row g-4 align-items-center">
+                  <div class="col-lg-7">
+                    <ul class="list-unstyled">
+                      <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        <strong>Reconhecimento Automático:</strong> O sistema
+                        identifica se o bairro visualizado é o mesmo que você
+                        cadastrou no seu perfil.
+                      </li>
+                      <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        <strong>Acesso Rápido:</strong> Se você for um morador
+                        local, o botão
+                        <button class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto"
+                          type="button">
+                          <i class="bi bi-star-fill me-2"></i>Avaliar!
+                        </button>
+                        aparecerá automaticamente.
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                        <strong>Impacto Real:</strong> Suas notas de 1 a 5
+                        alimentam os gráficos de infraestrutura, segurança e
+                        lazer que todos os outros usuários consultam.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-5">
+                    <div class="p-3 border rounded-3 bg-light shadow-sm text-center">
+                      <h6 class="text-uppercase fw-bold small text-muted mb-3">
+                        Teste a Interação abaixo:
+                      </h6>
+
+                      <div class="star-rating-wrapper">
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                          <i class="bi bi-star-fill star-icon-custom" data-value="1"></i>
+                          <i class="bi bi-star-fill star-icon-custom" data-value="2"></i>
+                          <i class="bi bi-star-fill star-icon-custom" data-value="3"></i>
+                          <i class="bi bi-star-fill star-icon-custom" data-value="4"></i>
+                          <i class="bi bi-star-fill star-icon-custom" data-value="5"></i>
+                        </div>
+                        <input type="hidden" name="rating" value="0" />
+                        <div class="feedback-text fw-bold" style="min-height: 24px">
+                          Toque para votar
+                        </div>
+                      </div>
+
+                      <small class="text-muted mt-2 d-block">
+                        Experimente passar o mouse ou tocar nas estrelas para
+                        ver o sistema em ação.
+                      </small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="alert alert-info mt-4 border-0 shadow-sm">
+                  <i class="bi bi-info-circle-fill me-2"></i>
+                  <strong>Lembre-se:</strong> Você pode editar sua avaliação a
+                  qualquer momento caso sua percepção sobre o bairro mude.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIm da Aba "Navegação e mapa"-->
+
+          <!-- Inicio da Aba "Comunidade e Interação"-->
+
+          <div class="tab-pane fade" id="content-atribuicao" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-people text-primary"></i> Avaliação dos
+                bairros
+              </h2>
+              <p>
+                Veja como colaborar com outros usuários e participar das
+                notas.
+              </p>
+
+              <div class="media-placeholder">
+                <img src="./IMG/Inserção de estrelas.gif" alt="Card de pré-visualização do bairro" width="100%"
+                  height="100%" draggable="false" />
+              </div>
+
+              <h5>Como avaliar um bairro:</h5>
+              <ul>
+                <li>Selecione o bairro em que você reside.</li>
+                <li>
+                  Clique no card da categoria desejada (ex: Segurança, Saúde,
+                  Lazer)
+                </li>
+                <li>
+                  Clique nas estrelas correspondentes para registrar sua nota
+                  de 1 a 5
+                </li>
+              </ul>
+              <div class="alert alert-info" role="alert">
+                <i class="bi bi-info-circle"></i>
+                <strong>Lembre-se:</strong>Apenas moradores cadastrados podem
+                avaliar o bairro através da inserção de estrelas!
+              </div>
+            </div>
+          </div>
+
+          <!--  **************** Inserção de Comentarios *******************-->
+
+          <div class="tab-pane fade" id="content-comentarios" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-people text-primary"></i>
+                Interação
+              </h2>
+              <p>
+                Veja como colaborar com outros usuários e participar da aba
+                comentarios.
+              </p>
+
+              <div class="media-placeholder">
+                <img src="./IMG/inserção de comentários.gif" alt="Card de pré-visualização do bairro" width="100%"
+                  height="100%" draggable="false" />
+              </div>
+
+              <h5>Como compartilhar sua experiência:</h5>
+              <ul>
+                <li>
+                  Escreva seu comentário sobre o bairro, sendo morador ou
+                  visitante (informação será mostrada para quem vizualizar seu
+                  comentário)
+                </li>
+                <li>Seja honesto e compartilhe apenas fatos verdadeiros</li>
+                <li>
+                  Mantenha o respeito e a empatia: evite palavras de baixo
+                  calão e ofensas
+                </li>
+                <li>
+                  Clique no botão
+                  <button class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto" type="button">
+                    <i class="bi bi-star-fill me-2"></i>Enviar
+                  </button>
+                  para publicar sua contribuição à comunidade
+                </li>
+              </ul>
+              <div class="alert alert-info" role="alert">
+                <i class="bi bi-info-circle"></i>
+                <strong>Lembre-se:</strong> Comentários que violarem nossas
+                diretrizes de respeito e convivência podem ser removidos.
+                Contamos com a sua colaboração para uma plataforma melhor!
+              </div>
+            </div>
+          </div>
+
+          <!--  **************** Tela de Apresentação *******************-->
+          <div class="tab-pane fade" id="content-apresentacao" role="tabpanel">
+            <div class="content-card">
+              <h2>
+                <i class="bi bi-people text-primary"></i>
+                Apresentação
+              </h2>
+              <p>Veja como acessar a tela de apresentação.</p>
+
+              <div class="media-placeholder">
+                <img src="./IMG/página de interação.gif" alt="Card de pré-visualização do bairro" width="100%"
+                  height="100%" draggable="false" />
+              </div>
+              <h5>
+                Como acessar a tela de apresentação das avaliações gerais:
+              </h5>
+              <ul>
+                <li>
+                  Na página principal do InfoBairro, selecione o bairro
+                  escolhido clicando em cima do PIN colorido onde contém a
+                  numeração de nota geral
+                </li>
+                <li>
+                  Ao clicar, irá aparecer um card na parte inferior da tela
+                  apresentando um resumo das avaliações
+                </li>
+                <li>
+                  Clique no botão
+                  <button class="btn btn-light text-primary btn-star-glow border-0 shadow-sm w-sm-auto" type="button">
+                    <i class="bi bi-star-fill me-2"></i>Detalhes Completos
+                  </button>
+                </li>
+                <li>
+                  O usuário será levado a página de Tela de Apresentação, onde
+                  mostra os cards das avaliações específicas (Segurança,
+                  Saúde, Educação...), A aba de comentários sobre a localidade
+                  ; contendo todas as informações sucintas e atualizadas sobre
+                  o bairro.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fim da Aba "Comunidade e Interação"-->
+
+          <!-- Inicio da Aba "Beneficios Premium"-->
+          <div class="tab-pane fade" id="content-dashboard" role="tabpanel">
+            <div class="content-section text-center">
+              <div class="mb-4">
+                <span class="badge bg-warning text-dark mb-2">Exclusivo</span>
+                <h2>Benefícios Premium</h2>
+              </div>
+
+              <div class="sub-topic text-start">
+                <h4>Dashboard Avançado</h4>
+                <p>
+                  Acesse métricas exclusivas, KPIs em tempo real e relatórios
+                  exportáveis que só o plano Premium oferece.
+                </p>
+                <div class="media-placeholder">
+                  <span>[Inserir Conteudo]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIm da Aba "Beneficios Premium"-->
+
+          <!-- Inicio da Aba "Suporte e Segurança"-->
+          <div class="tab-pane fade" id="content-suporte" role="tabpanel">
+            <div class="content-card">
+              <div class="accordion accordion-flush" id="accordionLegal">
+                <div class="accordion-item mb-3 border rounded">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#sup1">
+                      Suporte ao Usuário
+                    </button>
+                  </h2>
+                  <div id="sup1" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+                    <div class="accordion-body">
+                      <h2>
+                        <br />
+                        <i class="bi bi-shield-check text-primary"></i>
+                        Suporte e Segurança
+                      </h2>
+
+                      <p style="color: #635e5e">
+                        Sua segurança é nossa prioridade. Entenda as proteções
+                        e como pedir ajuda.
+                      </p>
+                      <h5>Como contatar o nosso suporte:</h5>
+                      <ul>
+                        <li>Clique na aba de Contato</li>
+                        <li>Copie o email de suporte</li>
+                        <li>
+                          Envie um email detalhando seu problema ou dúvida
+                        </li>
+                      </ul>
+                      <br /><br />
+                      <div class="media-placeholder">
+                        <span><img src="./IMG/Acesso-contato.png" alt="" style="max-width: 100%; height: auto"
+                            draggable="false" /></span>
+                      </div>
+                      <br />
+                      <br />
+
+                      <br />
+                      <br />
+                      <div class="media-placeholder">
+                        <span><img src="./IMG/Contato-Infobairro.png" alt="" style="max-width: 100%; height: auto"
+                            draggable="false" /></span>
+                      </div>
+                      <br />
+                      <div class="mt-4">
+                        <h5>Boas Práticas:</h5>
+                        <ol>
+                          <li>Nunca compartilhe sua senha com terceiros.</li>
+                          <li>
+                            Evite repetir senhas em sites e serviços diferentes.
+                          </li>
+                          <li>
+                            Em caso de dúvidas, nosso chat funciona 24/7.
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item mb-3 border rounded">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#sup2">
+                      Política de Privacidade
+                    </button>
+                  </h2>
+                  <div id="sup2" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+                    <div class="accordion-body">
+                      <br />
+                      <br />
+                      <h4 style="color: #838383">
+                        Como tratamos seus dados sob a LGPD.
+                      </h4>
+                      <br />
+                      <br />
+
+                      <h5>1. Coleta de Dados</h5>
+
+                      <br />
+                      O InfoBairro poderá coletar os seguintes dados:
+                      <ul>
+                        <br />
+                        <li>
+                          Dados cadastrais fornecidos voluntariamente pelo
+                          usuário (quando aplicável);
+                        </li>
+                        <br />
+                        <li>
+                          Dados de uso e navegação dentro da plataforma;
+                        </li>
+                        <br />
+                        <li>
+                          Dados de localização: obtidos via navegador ou
+                          dispositivo para identificar se o usuário é morador
+                          ou visitante de um bairro;
+                        </li>
+                        <br />
+                        <li>
+                          Informações técnicas: endereço IP, tipo de navegador
+                          e modelo do dispositivo.
+                        </li>
+                      </ul>
+                      <br />
+                      <h5>2. Uso dos dados de localização</h5>
+                      <br />
+                      Os dados de localização são utilizados exclusivamente
+                      para:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>
+                          Identificar a relação do usuário com o bairro
+                          avaliado (morador ou visitante);
+                        </li>
+                        <br />
+                        <li>
+                          Melhorar a contextualização das avaliações e
+                          comentários;
+                        </li>
+                        <br />
+                        <li>
+                          Aprimorar a experiência do usuário e a precisão das
+                          informações exibidas.
+                        </li>
+                      </ul>
+                      <br />
+                      <br />
+
+
+                      <div class="alert alert-info" role="alert">
+                        <i class="bi bi-info-circle"></i>
+                        <strong>Importante:</strong> O InfoBairro não utiliza dados de
+                        localização para rastreamento contínuo, nem para fins
+                        comerciais ou publicitários invasivos.
+                      </div>
+                      <br />
+                      <h5>3. Compartilhamento de Dados</h5>
+                      <br />
+                      O compartilhamento de dados ocorre de forma limitada:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>
+                          Prestadores de serviços: Como o Google Maps,
+                          estritamente para funcionalidades de mapa e
+                          geolocalização;
+                        </li>
+                        <br />
+                        <li>
+                          Autoridades públicas: Apenas quando exigido por lei
+                          ou ordem judicial;
+                        </li>
+                        <br />
+                        <li>
+                          Não há comercialização ou venda de dados pessoais
+                          para terceiros.
+                        </li>
+                      </ul>
+                      <br />
+                      <h5>4. Armazenamento e Segurança</h5>
+                      <br />
+                      Os dados são armazenados em ambientes seguros,
+                      protegidos por medidas técnicas contra acessos não
+                      autorizados e vazamentos. Eles são mantidos apenas pelo
+                      tempo necessário para cumprir as finalidades descritas
+                      nesta política.
+
+                      <br />
+                      <br />
+                      <h5>5. Direitos do Usuário</h5>
+                      <br />
+                      Nos termos da lei, o usuário tem direito a:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>
+                          Confirmar a existência de tratamento de seus dados;
+                        </li>
+                        <br />
+                        <li>
+                          Acessar, corrigir ou atualizar suas informações
+                          pessoais;
+                        </li>
+                        <br />
+                        <li>
+                          Solicitar a exclusão ou anonimização de dados
+                          (quando aplicável);
+                        </li>
+                        <br />
+                        <li>
+                          Revogar consentimentos previamente concedidos.
+                        </li>
+                      </ul>
+                      <br />
+                      <p>
+                       <div class="alert alert-info" role="alert">
+                          <i class="bi bi-info-circle"></i>
+                          <strong>As solicitações podem ser feitas através dos canais
+                            oficiais de contato do InfoBairro.</strong>
+                        </small>
+                      </div>
+
+                      </p>
+                      <br />
+                      <h5>6. Serviços de Terceiros e Atualizações</h5>
+                      <br />
+                      A utilização de mapas está sujeita às políticas do
+                      Google. Recomendamos a leitura dos termos desses
+                      fornecedores.
+                      <br />
+
+                      Esta Política pode ser atualizada periodicamente. Ao
+                      continuar utilizando o InfoBairro, o usuário declara
+                      estar ciente da coleta e uso de seus dados conforme aqui
+                      descrito.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item mb-3 border rounded">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#sup3">
+                      Termos de Uso
+                    </button>
+                  </h2>
+                  <div id="sup3" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+                    <div class="accordion-body">
+                      <h5>1. Sobre os Termos de Uso</h5>
+                      <br />
+                      Antes de utilizar a plataforma InfoBairro, é importante
+                      compreender que o acesso ao site implica na leitura e
+                      concordância com os Termos de Uso da plataforma.
+                      <br />
+                      Esses termos existem para garantir que o uso das
+                      informações disponibilizadas seja feito de forma
+                      responsável, ética e dentro da legislação vigente.
+                      <br />
+                      Caso o usuário não concorde com qualquer condição
+                      apresentada nos termos, recomenda-se que não utilize a
+                      plataforma.
+
+                      <br />
+                      <br />
+                      <h5>2. Finalidade da Plataforma</h5>
+                      <br />
+                      O InfoBairro foi criado com o objetivo de reunir e
+                      disponibilizar informações públicas sobre bairros de
+                      forma organizada e acessível.
+                      <br />
+                      As informações presentes na plataforma podem ter origem
+                      em:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>
+                          Bases de dados públicas e portais governamentais
+                        </li>
+                        <li>Estudos e relatórios técnicos</li>
+                        <li>Levantamentos estatísticos</li>
+                        <li>Pesquisas populares e relatos comunitários</li>
+                        <li>Outras fontes públicas disponíveis</li>
+                      </ul>
+                      <br />
+                      O propósito do site é facilitar o acesso a informações,
+                      permitindo que os usuários conheçam melhor diferentes
+                      regiões.
+                      <br />
+                      <br />
+                      <h5>3. Uso das Informações</h5>
+                      <br />
+                      É importante entender que todas as informações
+                      apresentadas na plataforma possuem caráter
+                      exclusivamente informativo. Isso significa que:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>
+                          O InfoBairro não emite opiniões ou recomendações
+                          sobre bairros.
+                        </li>
+                        <li>
+                          O site não classifica bairros como melhores ou
+                          piores para morar ou investir.
+                        </li>
+                        <li>
+                          As informações não substituem análises pessoais ou
+                          profissionais.
+                        </li>
+                      </ul>
+
+                      O usuário deve utilizar os dados como referência
+                      informativa, sempre realizando suas próprias análises.
+                      <br />
+                      <br />
+                      <h5>4. Atualização dos Dados</h5>
+                      <br />
+                      Algumas informações disponíveis na plataforma podem
+                      sofrer alterações ao longo do tempo.
+                      <br />
+                      Isso acontece porque muitos dados são provenientes de
+                      bases públicas que podem ser atualizadas periodicamente.
+                      <br />
+                      Por esse motivo:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>
+                          Algumas informações podem estar desatualizadas ou
+                          incompletas.
+                        </li>
+                        <li>
+                          O InfoBairro não garante precisão absoluta para
+                          finalidades específicas.
+                        </li>
+                      </ul>
+                      <br />
+                      Sempre que possível, recomenda-se consultar fontes
+                      oficiais complementares.
+                      <br />
+                      <br />
+                      <h5>5. Serviços de Terceiros</h5>
+                      <br />
+                      A plataforma pode utilizar serviços externos, como
+                      sistemas de mapas e geolocalização.
+                      <br />
+                      Por exemplo, a integração com o Google Maps permite
+                      visualizar a localização de bairros e pontos de
+                      interesse.
+                      <br />
+                      Esses serviços são fornecidos por terceiros e podem
+                      possuir regras próprias de uso, independentes da
+                      plataforma InfoBairro.
+                      <br />
+                      <br />
+                      <h5>6. Responsabilidade do Usuário</h5>
+                      <br />
+                      Ao utilizar a plataforma, o usuário concorda em utilizar
+                      as informações de forma responsável.
+                      <br />
+                      O InfoBairro não se responsabiliza por:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>
+                          Decisões tomadas com base nas informações
+                          apresentadas
+                        </li>
+                        <li>Interpretações pessoais dos dados</li>
+                        <li>
+                          Danos ou prejuízos decorrentes do uso das
+                          informações
+                        </li>
+                      </ul>
+                      Cada usuário é responsável pela forma como utiliza o
+                      conteúdo disponibilizado.
+                      <br />
+                      <br />
+                      <h5>7. Uso Indevido das Informações</h5>
+
+                      <br />
+                      Para manter um ambiente informativo e respeitoso, é
+                      proibido utilizar os dados da plataforma para:
+                      <br /><br />
+                      <ul>
+                        <li>Atividades ilegais</li>
+                        <li>Difamação de bairros ou comunidades</li>
+                        <li>Discurso discriminatório</li>
+                        <li>
+                          Manipulação de informações para enganar terceiros
+                        </li>
+                      </ul>
+
+                      O uso responsável da informação contribui para manter a
+                      confiabilidade da plataforma.
+                      <br />
+                      <br />
+                      <h5>8. Conteúdo Publicado por Usuários</h5>
+                      <br />
+                      Caso a plataforma permita a participação de usuários
+                      (comentários, avaliações ou relatos), algumas regras
+                      devem ser seguidas.
+                      <br />
+                      <br />
+                      <h5 style="color: #838383">
+                        Responsabilidade pelo conteúdo
+                      </h5>
+                      <br />
+                      Mesmo que a publicação seja anônima, o usuário continua
+                      sendo legalmente responsável pelo que publica.
+                      <br />
+                      <br />
+                      <h5 style="color: #838383">Conteúdos proibidos</h5>
+                      <br />
+                      Não é permitido publicar:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>Propaganda ou publicidade não autorizada</li>
+                        <li>Dados pessoais (telefone, endereço, e-mail)</li>
+                        <li>
+                          Conteúdos ofensivos, discriminatórios ou que incitem
+                          violência
+                        </li>
+                      </ul>
+                      <br />
+                      <br />
+                      <h5 style="color: #838383">Moderação</h5>
+                      <br />
+                      A plataforma pode remover conteúdos e bloquear usuários
+                      que violem as regras de uso.
+                      <br />
+                      <br />
+                      <h5>9. Direitos Autorais</h5>
+                      <br />
+                      A estrutura da plataforma, textos autorais, identidade
+                      visual e marca InfoBairro são protegidos por direitos de
+                      propriedade intelectual.
+                      <br />
+                      <br />
+                      <b>A reprodução ou exploração comercial desse conteúdo
+                        não é permitida sem autorização.</b>
+                      <br />
+                      <br />
+                      <h5>10. Atualizações dos Termos</h5>
+                      <br />
+                      Os Termos de Uso podem ser atualizados a qualquer
+                      momento para melhorar a plataforma ou adequá-la à
+                      legislação.
+                      <br />
+                      <br />
+                      O uso contínuo do site após alterações significa que o
+                      usuário concorda com as novas condições.
+                      <br />
+                      <br />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border rounded">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#sup4">
+                      Política de Comunidade
+                    </button>
+                  </h2>
+                  <div id="sup4" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+                    <div class="accordion-body">
+                      <br />
+                      <h4 style="color: #838383">
+                        Diretrizes de comportamento e ética.
+                      </h4>
+                      <br />
+
+                      <h5>1. Objetivo da Comunidade</h5>
+                      <br />
+
+                      O espaço de avaliações e comentários foi criado para que
+                      usuários compartilhem experiências, percepções e
+                      informações gerais sobre bairros, sempre de forma
+                      responsável e respeitosa.
+                      <br />
+                      <br />
+                      <h5>2. Anonimato com Responsabilidade</h5>
+                      <br />
+                      Os comentários são publicados de forma anônima; O
+                      anonimato não deve ser interpretado como permissão para
+                      abusos; Cada usuário é responsável pelo conteúdo que
+                      publica, inclusive perante a legislação vigente.
+                      <br />
+                      <br />
+                      <br />
+                      <h5>3. O Que É Permitido</h5>
+                      <br />
+                      São bem-vindos comentários que:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>
+                          Relatem experiências pessoais de forma genérica e
+                          respeitosa;
+                        </li>
+                        <li>
+                          Descrevam características do bairro (infraestrutura,
+                          transporte, comércio, lazer, etc.);
+                        </li>
+                        <li>
+                          Contribuam para o entendimento coletivo, sem ataques
+                          ou generalizações ofensivas;
+                        </li>
+                        <li>
+                          Se mantenham dentro de um tom informativo e
+                          construtivo.
+                        </li>
+                      </ul>
+                      <br />
+                      <h5>4. O Que Não É Permitido</h5>
+                      <br />
+                      Não são permitidos conteúdos que contenham:
+                      <br /><br />
+                      <ul>
+                        <li>
+                          Divulgação de serviços, anúncios, ofertas ou
+                          autopromoção;
+                        </li>
+                        <li>
+                          Telefones, endereços, e-mails, links de contato ou
+                          redes sociais;
+                        </li>
+                        <li>Dados pessoais próprios ou de terceiros;</li>
+                        <li>
+                          Ofensas, xingamentos, ameaças ou ataques pessoais;
+                        </li>
+                        <li>
+                          Conteúdo difamatório, calunioso ou que atribua
+                          crimes sem comprovação;
+                        </li>
+                        <li>
+                          Discurso de ódio, discriminação, preconceito ou
+                          incitação à violência;
+                        </li>
+                        <li>
+                          Informações falsas, sensacionalistas ou
+                          deliberadamente enganosas.
+                        </li>
+                      </ul>
+                      <br />
+
+                      <h5>5. Moderação e Medidas Disciplinares</h5>
+                      <br />
+                      Para manter a qualidade, o InfoBairro poderá realizar
+                      moderação manual ou automática e aplicar:
+                      <br />
+                      <br />
+                      <ul>
+                        <li>Remoção total ou parcial do comentário;</li>
+                        <li>
+                          Advertência, suspensão temporária ou
+                          <b>bloqueio permanente</b> da conta em casos graves
+                          ou reincidência.
+                        </li>
+                      </ul>
+                      <br />
+                      <h5>6. Neutralidade do InfoBairro</h5>
+                      <br />
+                      As opiniões expressas representam exclusivamente a visão
+                      de quem as publicou, não refletindo a posição oficial ou
+                      recomendações do InfoBairro.
+                      <br />
+                      <br />
+                      <h5>7. Atualizações</h5>
+                      <br />
+                      Esta política pode ser atualizada a qualquer momento. Ao
+                      participar, o usuário declara estar ciente e concorda em
+                      contribuir para um ambiente seguro e equilibrado.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fim da Aba "Suporte e Segurança"-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
